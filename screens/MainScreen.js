@@ -8,7 +8,7 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import CovidScreen from '../covid-vaccine-screen/CovidScreen';
 import VaccineScreen from '../covid-vaccine-screen/VaccineScreen';
 import HomeScreen from '../covid-vaccine-screen/HomeScreen';
-import PersonScreen from '../covid-vaccine-screen/PersonScreen';
+import TrickcovidScreen from '../covid-vaccine-screen/TrickcovidScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -57,7 +57,7 @@ const MainScreen = ({navigation}) => {
       />
       <Tab.Screen
         name="Person"
-        component={PersonScreen}
+        component={TrickcovidScreen}
         options={{
           tabBarLabel: 'Me',
           tabBarIcon: ({ color, size }) => (
