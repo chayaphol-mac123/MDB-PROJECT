@@ -1,5 +1,9 @@
 import React, {useState} from 'react';
-import {View, Text, Button, StyleSheet, TouchableOpacity, Image} from 'react-native';
+import {View, Text, Button, StyleSheet, Image} from 'react-native';
+import Card from './covidFolder/CardForTrick'
+import Card2 from './covidFolder/CardForTrick2'
+import ListTrickScreen from '../TrickCovidFolder/ListTrickScreen';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
 const TrickcovidScreen = ({navigation}) => {
@@ -13,17 +17,17 @@ const TrickcovidScreen = ({navigation}) => {
                <Text style={{fontWeight: 'bold', fontSize: 20,}} >ทริคเล็กๆน้อยๆที่จะช่วยคุณในยุคโควิด</Text>
            </View>
 
-           <View style={styles.trickCovid1}>
-               <Text>Click1</Text>
-           </View>
+           <TouchableOpacity onPress={() => navigation.navigate('ListTrickScreen')}>
+                <Card title="TrickCovid" />
+           </TouchableOpacity>
 
            <View style={styles.firstSection}>
                <Text style={{fontWeight: 'bold', fontSize: 20,}} >VDO ความรู้เล็กๆน้อยเกี่ยวกับ Covid-19</Text>
            </View>
 
-           <View style={styles.trickCovid2}>
-               <Text>Click2</Text>
-           </View>
+           <TouchableOpacity>
+                <Card2  title="VideoTrickCovid" />
+           </TouchableOpacity>
            
        </View>
     )

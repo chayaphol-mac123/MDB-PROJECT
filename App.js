@@ -10,6 +10,9 @@ import OnboardingScreen from './screens/OnboardingScreen';
 import LoginScreen from './screens/LoginScreen';
 import SignupScreen from './screens/SignupScreen';
 import MainScreen from './screens/MainScreen';
+import ListTrickScreen from './TrickCovidFolder/ListTrickScreen';
+
+import TrickScreen1 from './TrickCovidFolder/TrickScreen/TrickScreen1';
 
 import PageInfo1 from './covid-vaccine-screen/PageCovid/PageInfo1';
 import PageInfo2 from './covid-vaccine-screen/PageCovid/PageInfo2';
@@ -22,6 +25,7 @@ import Moderna from './covid-vaccine-screen/PageVaccine/Moderna';
 import Astra from './covid-vaccine-screen/PageVaccine/Astra';
 import Sinopharm from './covid-vaccine-screen/PageVaccine/Sinopharm';
 import Pfizer from './covid-vaccine-screen/PageVaccine/Pfizer';
+
 
 const AppStack = createStackNavigator();
 
@@ -53,6 +57,16 @@ const App = () => {
           name="Main" 
           component={MainScreen} 
           options={{header: ()=> null}}
+        />
+
+        <AppStack.Screen
+          name="ListTrickScreen"
+          component={ListTrickScreen}
+        />
+
+        <AppStack.Screen
+          name="TrickScreen1"
+          component={TrickScreen1}
         />
 
         {/* Dollar Screen */}
