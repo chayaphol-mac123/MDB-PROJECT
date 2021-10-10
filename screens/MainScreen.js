@@ -9,6 +9,7 @@ import CovidScreen from '../covid-vaccine-screen/CovidScreen';
 import VaccineScreen from '../covid-vaccine-screen/VaccineScreen';
 import HomeScreen from '../covid-vaccine-screen/HomeScreen';
 import TrickcovidScreen from '../covid-vaccine-screen/TrickcovidScreen';
+import ChecklistScreen from '../covid-vaccine-screen/Checklist'
 
 const Tab = createBottomTabNavigator();
 
@@ -56,12 +57,22 @@ const MainScreen = ({navigation}) => {
         }}
       />
       <Tab.Screen
-        name="Person"
+        name="Trick"
         component={TrickcovidScreen}
         options={{
-          tabBarLabel: 'Me',
+          tabBarLabel: 'Trick',
           tabBarIcon: ({ color, size }) => (
-            <Icon name="ios-person" color={color} size={size} />
+            <FontAwesome5 name="book" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Checklist"
+        component={ChecklistScreen}
+        options={{
+          tabBarLabel: 'Checklist',
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome5 name="check" color={color} size={size} />
           ),
         }}
       />

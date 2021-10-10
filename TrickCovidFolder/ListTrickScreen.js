@@ -11,7 +11,7 @@ const ListTrickScreen = ({navigation}) => {
         <ScrollView>
             <View>
                 <TouchableOpacity onPress={() => navigation.navigate('TrickScreen1')}>
-                    <Card title="10 จุดสะสมโคโรนาไวรัสในร่างกาย"></Card>
+                    <Card title="8 จุดสะสมโคโรนาไวรัสในร่างกาย"></Card>
                 </TouchableOpacity>
 
                 <Card title="7 วิธีการรับมือกับโควิด">List Screen Covid</Card>

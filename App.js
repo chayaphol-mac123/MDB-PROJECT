@@ -25,6 +25,7 @@ import Moderna from './covid-vaccine-screen/PageVaccine/Moderna';
 import Astra from './covid-vaccine-screen/PageVaccine/Astra';
 import Sinopharm from './covid-vaccine-screen/PageVaccine/Sinopharm';
 import Pfizer from './covid-vaccine-screen/PageVaccine/Pfizer';
+import VdoScreen from './TrickCovidFolder/VdoScreen/VdoScreen1';
 
 
 const AppStack = createStackNavigator();
@@ -67,6 +68,11 @@ const App = () => {
         <AppStack.Screen
           name="TrickScreen1"
           component={TrickScreen1}
+        />
+
+        <AppStack.Screen
+          name="VdoScreen"
+          component={VdoScreen}
         />
 
         {/* Dollar Screen */}

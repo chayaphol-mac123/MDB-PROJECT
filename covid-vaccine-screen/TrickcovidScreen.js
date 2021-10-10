@@ -3,6 +3,7 @@ import {View, Text, Button, StyleSheet, Image} from 'react-native';
 import Card from './covidFolder/CardForTrick'
 import Card2 from './covidFolder/CardForTrick2'
 import ListTrickScreen from '../TrickCovidFolder/ListTrickScreen';
+import VdoScreen from '../TrickCovidFolder/VdoScreen/VdoScreen1';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
@@ -25,7 +26,7 @@ const TrickcovidScreen = ({navigation}) => {
                <Text style={{fontWeight: 'bold', fontSize: 20,}} >VDO ความรู้เล็กๆน้อยเกี่ยวกับ Covid-19</Text>
            </View>
 
-           <TouchableOpacity>
+           <TouchableOpacity onPress={() => navigation.navigate('VdoScreen')}>
                 <Card2  title="VideoTrickCovid" />
            </TouchableOpacity>
            
