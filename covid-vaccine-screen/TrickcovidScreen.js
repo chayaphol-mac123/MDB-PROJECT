@@ -55,7 +55,7 @@ const styles = StyleSheet.create ({
     },
     firstSection: {
         alignItems: 'center',
-        marginTop: 60,
+        marginTop: 50,
     },
     trickCovid1: {
         backgroundColor: 'chartreuse',
