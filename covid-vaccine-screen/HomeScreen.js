@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, Button, StyleSheet, TouchableOpacity, Image, SafeAreaView, ActivityIndicator } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
+import NumberFormat from 'react-number-format';
 
 
 const covidURL = 'https://covid19.ddc.moph.go.th/api/Cases/today-cases-all'
@@ -15,7 +16,8 @@ const HomeScreen = ({ navigation }) => {
             .then((response) => response.json())
             .then((json) => setData(json))
             .catch((error) => alert(error))
-            .finally(setLoading(false));
+            .finally(setLoading(false))
+            
     })
 
     return (
@@ -35,18 +37,33 @@ const HomeScreen = ({ navigation }) => {
                     data={data}
                     keyExtractor={({ id }, index) => id}
                     renderItem={({ item }) => (
+
                         <View>
                             <View style={styles.covidHeader}>
 
                                 <View style={styles.covidDetailLeft}>
                                     <Text style={styles.covidText}>ติดเชื้มเพิ่มวันนี้</Text>
-                                    <Text style={styles.numberCovidText}>+ {item.new_case}</Text>
+                                    <NumberFormat
+                                        value={item.new_case}
+                                        displayType={'text'}
+                                        thousandSeparator={true}
+                                        prefix={'+ '}
+                                        renderText={value => <Text style={styles.numberCovidText}>{value}</Text>} 
+                                    />
                                 </View>
 
                                 <View style={styles.covidDetailRight}>
                                     <Text style={styles.covidText}>หายป่วยวันนี้</Text>
-                                    <Text style={styles.numberCovidText}>+ {item.new_recovered}</Text>
+                                    <NumberFormat
+                                        value={item.new_recovered}
+                                        displayType={'text'}
+                                        thousandSeparator={true}
+                                        prefix={'+ '}
+                                        renderText={value => <Text style={styles.numberCovidText}>{value}</Text>} 
+                                    />
                                 </View>
+
+                                
 
                             </View>
 
@@ -54,12 +71,24 @@ const HomeScreen = ({ navigation }) => {
 
                                 <View style={styles.covidDetailLeft2}>
                                     <Text style={styles.covidText}>ติดเชื้อสะสม</Text>
-                                    <Text style={styles.numberCovidText}> {item.total_case} </Text>
+                                    <NumberFormat
+                                        value={item.total_case}
+                                        displayType={'text'}
+                                        thousandSeparator={true}
+                                        prefix={''}
+                                        renderText={value => <Text style={styles.numberCovidText}>{value}</Text>} 
+                                    />
                                 </View>
 
                                 <View style={styles.covidDetailRight2}>
                                     <Text style={styles.covidText}>หายป่วยสะสม</Text>
-                                    <Text style={styles.numberCovidText}> {item.total_recovered} </Text>
+                                    <NumberFormat
+                                        value={item.total_recovered}
+                                        displayType={'text'}
+                                        thousandSeparator={true}
+                                        prefix={''}
+                                        renderText={value => <Text style={styles.numberCovidText}>{value}</Text>} 
+                                    />
                                 </View>
 
                             </View>
@@ -68,12 +97,24 @@ const HomeScreen = ({ navigation }) => {
 
                                 <View style={styles.covidDetailLeft3}>
                                     <Text style={styles.covidText}>เสียชีวิตเพิ่ม</Text>
-                                    <Text style={styles.numberCovidText}>+ {item.new_death} </Text>
+                                    <NumberFormat
+                                        value={item.new_death}
+                                        displayType={'text'}
+                                        thousandSeparator={true}
+                                        prefix={'+ '}
+                                        renderText={value => <Text style={styles.numberCovidText}>{value}</Text>} 
+                                    />
                                 </View>
 
                                 <View style={styles.covidDetailRight3}>
-                                    <Text style={styles.covidText}>กำลังรักษา</Text>
-                                    <Text style={styles.numberCovidText}> 150,000 </Text>
+                                    <Text style={styles.covidText}>เสียชีวิตสะสม</Text>
+                                    <NumberFormat
+                                        value={item.total_death}
+                                        displayType={'text'}
+                                        thousandSeparator={true}
+                                        prefix={'+ '}
+                                        renderText={value => <Text style={styles.numberCovidText}>{value}</Text>} 
+                                    />
                                 </View>
 
                             </View>
@@ -177,7 +218,7 @@ const styles = StyleSheet.create({
         marginTop: 10,
         marginLeft: 5,
         marginRight: 5,
-        backgroundColor: 'darkturquoise',
+        backgroundColor: 'grey',
         width: 175,
         height: 150,
         borderRadius: 10,
@@ -187,7 +228,7 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontWeight: 'bold',
         textAlign: 'center',
-        fontSize: 16,
+        fontSize: 20,
     },
     numberCovidText: {
         color: '#fff',
