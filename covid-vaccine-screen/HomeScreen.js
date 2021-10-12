@@ -1,69 +1,103 @@
-import React, {useState} from 'react';
-import {View, Text, Button, StyleSheet, TouchableOpacity, Image} from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, Button, StyleSheet, TouchableOpacity, Image, SafeAreaView, ActivityIndicator } from 'react-native';
+import { FlatList } from 'react-native-gesture-handler';
 
 
-const HomeScreen = ({navigation}) => {
+const covidURL = 'https://covid19.ddc.moph.go.th/api/Cases/today-cases-all'
+
+const HomeScreen = ({ navigation }) => {
+
+    const [isLoading, setLoading] = useState(true);
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        fetch(covidURL)
+            .then((response) => response.json())
+            .then((json) => setData(json))
+            .catch((error) => alert(error))
+            .finally(setLoading(false));
+    })
+
     return (
-       <View style={styles.container}>
-           <View style={styles.header}>
-               <Text style={styles.headerText}>Home</Text>
-           </View>
-
-            <View style={styles.headSection}>
-                <Text style={{fontWeight: 'bold', fontSize: 24,}}>สถานการณ์ Covid-19</Text>
+        <SafeAreaView style={styles.container}>
+            <View style={styles.header}>
+                <Text style={styles.headerText}>Home</Text>
             </View>
 
-            
-           <View style={styles.covidHeader}>
+            <View style={styles.headSection}>
+                <Text style={{ fontWeight: 'bold', fontSize: 24, }}>สถานการณ์ Covid-19</Text>
+            </View>
 
-               <View style={styles.covidDetailLeft}>
-                    <Text style={styles.covidText}>ติดเชื้มเพิ่มวันนี้</Text>
-                    <Text style={styles.numberCovidText}>+ 10,000 </Text>
-               </View>
+            {isLoading ? (
+                <ActivityIndicator />
+            ) : (
+                <FlatList
+                    data={data}
+                    keyExtractor={({ id }, index) => id}
+                    renderItem={({ item }) => (
+                        <View>
+                            <View style={styles.covidHeader}>
 
-               <View style={styles.covidDetailRight}>
-                    <Text style={styles.covidText}>หายป่วยวันนี้</Text>
-                    <Text style={styles.numberCovidText}>+ 6,400 </Text>
-               </View>
-               
-           </View>
+                                <View style={styles.covidDetailLeft}>
+                                    <Text style={styles.covidText}>ติดเชื้มเพิ่มวันนี้</Text>
+                                    <Text style={styles.numberCovidText}>+ {item.new_case}</Text>
+                                </View>
 
-           <View style={styles.covidHeader}>
+                                <View style={styles.covidDetailRight}>
+                                    <Text style={styles.covidText}>หายป่วยวันนี้</Text>
+                                    <Text style={styles.numberCovidText}>+ {item.new_recovered}</Text>
+                                </View>
 
-               <View style={styles.covidDetailLeft2}>
-                    <Text style={styles.covidText}>ติดเชื้อสะสม</Text>
-                    <Text style={styles.numberCovidText}> 1,200,000 </Text>
-               </View>
+                            </View>
 
-               <View style={styles.covidDetailRight2}>
-                    <Text style={styles.covidText}>หายป่วนสะสม</Text>
-                    <Text style={styles.numberCovidText}> 1,000,000 </Text>
-               </View>
-               
-           </View>
+                            <View style={styles.covidHeader}>
 
-           <View style={styles.covidHeader}>
+                                <View style={styles.covidDetailLeft2}>
+                                    <Text style={styles.covidText}>ติดเชื้อสะสม</Text>
+                                    <Text style={styles.numberCovidText}> {item.total_case} </Text>
+                                </View>
 
-               <View style={styles.covidDetailLeft3}>
-                    <Text style={styles.covidText}>เสียชีวิตเพิ่ม</Text>
-                    <Text style={styles.numberCovidText}> 352 </Text>
-               </View>
+                                <View style={styles.covidDetailRight2}>
+                                    <Text style={styles.covidText}>หายป่วยสะสม</Text>
+                                    <Text style={styles.numberCovidText}> {item.total_recovered} </Text>
+                                </View>
 
-               <View style={styles.covidDetailRight3}>
-                    <Text style={styles.covidText}>กำลังรักษา</Text>
-                    <Text style={styles.numberCovidText}> 150,000 </Text>
-               </View>
-               
-           </View>
-           
-       </View>
-       
+                            </View>
+
+                            <View style={styles.covidHeader}>
+
+                                <View style={styles.covidDetailLeft3}>
+                                    <Text style={styles.covidText}>เสียชีวิตเพิ่ม</Text>
+                                    <Text style={styles.numberCovidText}>+ {item.new_death} </Text>
+                                </View>
+
+                                <View style={styles.covidDetailRight3}>
+                                    <Text style={styles.covidText}>กำลังรักษา</Text>
+                                    <Text style={styles.numberCovidText}> 150,000 </Text>
+                                </View>
+
+                            </View>
+                        </View>
+
+
+                    )}
+                />)}
+
+
+
+
+
+
+
+
+        </SafeAreaView>
+
     )
 }
 
 export default HomeScreen;
 
-const styles = StyleSheet.create ({
+const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
