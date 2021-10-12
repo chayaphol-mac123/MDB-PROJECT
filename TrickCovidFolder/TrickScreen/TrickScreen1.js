@@ -18,7 +18,7 @@ const TrickScreen1 = ({navigation}) => {
 
                 <View style={styles.header}>
                     <Text style={styles.textHeader}>8 จุดสะสม</Text>
-                    <Text style={styles.textHeader}>โคโรนาไวรัสในร่างกาย</Text>
+                    <Text style={styles.textHeader}>โคโรนาไวรัสที่ควรระวัง</Text>
                 </View>
             
                 <View style={styles.body}>

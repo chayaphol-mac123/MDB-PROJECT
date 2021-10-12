@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Button, StyleSheet, TouchableOpacity, Image, SafeAreaView, ActivityIndicator } from 'react-native';
-import { FlatList } from 'react-native-gesture-handler';
+import { View, Text, Button, StyleSheet, TouchableOpacity, Image, SafeAreaView, ActivityIndicator, FlatList } from 'react-native';
 import NumberFormat from 'react-number-format';
 
 
@@ -13,11 +12,11 @@ const HomeScreen = ({ navigation }) => {
 
     useEffect(() => {
         fetch(covidURL)
-            .then((response) => response.json())
-            .then((json) => setData(json))
+            .then(res => res.json())
+            .then((result) => {setData(result)})
             .catch((error) => alert(error))
-            .finally(setLoading(false))
-            
+            .finally(setLoading.bind(false))
+           
     })
 
     return (
@@ -35,9 +34,8 @@ const HomeScreen = ({ navigation }) => {
             ) : (
                 <FlatList
                     data={data}
-                    keyExtractor={({ id }, index) => id}
+                    keyExtractor={(item, index) => index.toString()}
                     renderItem={({ item }) => (
-
                         <View>
                             <View style={styles.covidHeader}>
 
@@ -119,18 +117,8 @@ const HomeScreen = ({ navigation }) => {
 
                             </View>
                         </View>
-
-
                     )}
                 />)}
-
-
-
-
-
-
-
-
         </SafeAreaView>
 
     )
