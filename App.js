@@ -13,6 +13,7 @@ import MainScreen from './screens/MainScreen';
 import ListTrickScreen from './TrickCovidFolder/ListTrickScreen';
 
 import TrickScreen1 from './TrickCovidFolder/TrickScreen/TrickScreen1';
+import TrickScreen2 from './TrickCovidFolder/TrickScreen/TrickScreen2';
 
 import PageInfo1 from './covid-vaccine-screen/PageCovid/PageInfo1';
 import PageInfo2 from './covid-vaccine-screen/PageCovid/PageInfo2';
@@ -68,6 +69,11 @@ const App = () => {
         <AppStack.Screen
           name="TrickScreen1"
           component={TrickScreen1}
+        />
+
+        <AppStack.Screen
+          name="TrickScreen2"
+          component={TrickScreen2}
         />
 
         <AppStack.Screen

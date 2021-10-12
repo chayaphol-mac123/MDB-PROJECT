@@ -8,7 +8,7 @@ const TrickScreen1 = ({navigation}) => {
     const highlightText = string =>
       string.split(' ').map((word, i) => (
         <Text key={i}>
-          <Text style={styles.highlightText}>{word} </Text>
+          <Text style={styles.highlightText}>{word}</Text>
         </Text>
       ));
 

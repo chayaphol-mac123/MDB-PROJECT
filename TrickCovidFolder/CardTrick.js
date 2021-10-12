@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     marginTop:10
   },
   card:{
-    backgroundColor: 'dodgerblue',
+    backgroundColor: 'cadetblue',
     width: 350,
     height: 80,
     margin: 20,

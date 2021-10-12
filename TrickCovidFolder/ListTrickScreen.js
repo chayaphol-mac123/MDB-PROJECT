@@ -14,17 +14,12 @@ const ListTrickScreen = ({navigation}) => {
                     <Card title="8 จุดสะสมโคโรนาไวรัสในร่างกาย"></Card>
                 </TouchableOpacity>
 
-                <Card title="7 วิธีการรับมือกับโควิด">List Screen Covid</Card>
+                <TouchableOpacity onPress={() => navigation.navigate('TrickScreen2')}>
+                    <Card title="7 วิธีการเอาตัวรอดในยุคโควิด">List Screen Covid</Card>
+                </TouchableOpacity>
 
-                <Card title="7 วิธีการรับมือกับโควิด">List Screen Covid</Card>
+                <Card title="6 วิธีทำโปรเจคให้เสร็จทันเวลา">List Screen Covid</Card>
 
-                <Card title="7 วิธีการรับมือกับโควิด">List Screen Covid</Card>
-
-                <Card title="7 วิธีการรับมือกับโควิด">List Screen Covid</Card>
-
-                <Card title="7 วิธีการรับมือกับโควิด">List Screen Covid</Card>
-
-                <Card title="7 วิธีการรับมือกับโควิด">List Screen Covid</Card>
             </View>
         </ScrollView>
  
