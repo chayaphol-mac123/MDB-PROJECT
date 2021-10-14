@@ -29,6 +29,8 @@ const HomeScreen = ({ navigation }) => {
                 <Text style={{ fontWeight: 'bold', fontSize: 24, }}>สถานการณ์ Covid-19</Text>
             </View>
 
+            
+
             {isLoading ? (
                 <ActivityIndicator />
             ) : (
@@ -37,6 +39,11 @@ const HomeScreen = ({ navigation }) => {
                     keyExtractor={(item, index) => index.toString()}
                     renderItem={({ item }) => (
                         <View>
+
+                            <View style={styles.headSection2}>
+                                <Text style={{ fontWeight: 'bold', fontSize: 24, }}>{item.txn_date}</Text>
+                            </View>
+
                             <View style={styles.covidHeader}>
 
                                 <View style={styles.covidDetailLeft}>
@@ -139,6 +146,10 @@ const styles = StyleSheet.create({
     headSection: {
         alignItems: 'center',
         marginTop: 15,
+    },
+    headSection2: {
+        alignItems: 'center',
+        marginTop: 1,
     },
     headerText: {
         color: '#fff',

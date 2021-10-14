@@ -6,6 +6,9 @@ import ListTrickScreen from '../TrickCovidFolder/ListTrickScreen';
 import VdoScreen from '../TrickCovidFolder/VdoScreen/VdoScreen1';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
+const imageInfo_1 = {
+    uri: "https://cdn.discordapp.com/attachments/877781772052602913/898131901531947018/halting-workplace-01.png"
+  }
 
 const TrickcovidScreen = ({navigation}) => {
     return (
@@ -19,7 +22,7 @@ const TrickcovidScreen = ({navigation}) => {
            </View>
 
            <TouchableOpacity onPress={() => navigation.navigate('ListTrickScreen')}>
-                <Card title="TrickCovid" />
+                <Card title="TrickCovid" uri={imageInfo_1} />
            </TouchableOpacity>
 
            <View style={styles.firstSection}>

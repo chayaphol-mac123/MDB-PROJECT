@@ -64,16 +64,31 @@ const App = () => {
         <AppStack.Screen
           name="ListTrickScreen"
           component={ListTrickScreen}
+          options={{
+            title: 'Trick Covid For Everyone',
+            headerStyle: {
+              backgroundColor: 'lightpink',
+              shadowColor: 'black',
+              elevation: 0,
+            },
+            headerTitleAlign: 'center',
+          }}
         />
 
         <AppStack.Screen
           name="TrickScreen1"
           component={TrickScreen1}
+          options={{
+            title: '',
+          }}
         />
 
         <AppStack.Screen
           name="TrickScreen2"
           component={TrickScreen2}
+          options={{
+            title: '',
+          }}
         />
 
         <AppStack.Screen

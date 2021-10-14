@@ -8,8 +8,8 @@ const ChecklistScreen = ({navigation}) => {
                <Text style={styles.headerText}>Covid Checklist</Text>
            </View>
 
-           <View>
-               <Text>Dollar Checkist Here</Text>
+           <View style={styles.body}>
+               <Text>Coming Soon !</Text>
            </View>
         </View>
     )
