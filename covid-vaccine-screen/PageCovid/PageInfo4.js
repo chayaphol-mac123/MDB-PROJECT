@@ -1,5 +1,5 @@
 import React from 'react'
-import {Text,StyleSheet, View,Image } from 'react-native'
+import {Dimensions,Text,StyleSheet, View,Image } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 const PageInfo4 = ({navigation}) => {
   const Info_1 = {
@@ -30,38 +30,31 @@ const PageInfo4 = ({navigation}) => {
       return(
         <ScrollView>
           <View >
-            {/* Topic header */}
-              <Text style={styles.text_h1}>Covid-19แพร่เชื้อได้อย่างไร</Text>  
-            {/* text and image on one line */}
-              <View style={{flexDirection:'row',alignItems:'center'}} >
-                <Image style={styles.cardImage1} source={{uri:'http://www.dmscsmartlifeblog.com/userfiles/images/sneeze.jpg'}}/>
-                <Text style={styles.text_image1}>{Info_1.text}</Text>
-              </View>
-            {/* text normal */}
-              <View>
-              <Text style={styles.text_normal}>{Info_2.text}</Text>
-              <Text style={styles.text_normal}>{Info_3.text}</Text>
-              </View>
-              <View>
-                  
-              </View>
-              <Image style={styles.cardImage2} source={{uri:"https://www.sikarin.com/wp-content/uploads/2021/07/14032015791791-1-1024x1024.jpg"}}/>
-              <View>
-              <Text style={styles.text_normal}>{Info_4.text}</Text>
-              <Text style={styles.text_h1}>สาเหตุที่ทำให้โควิด-19 (COVID-19) ติดต่อกันได้ง่าย</Text>
-              <Image style={styles.cardImage2} source={{uri:"https://img.vixdata.io/pd/webp-large/pt/sites/default/files/v/virus-gripe-mascara-0320-1400x800.jpg"}}/>
+            <View style={styles.cardView}>     
+                <Image style={styles.image} source={{uri:'http://www.dmscsmartlifeblog.com/userfiles/images/sneeze.jpg'}}/>
+                <Text style={styles.title1}>Covid-19แพร่เชื้อได้อย่างไร</Text>  
+                <Text style={styles.descriptions}>{Info_1.text}</Text>
+                <Text style={styles.descriptions}>{Info_2.text}</Text>
+                <Text style={styles.descriptions}>{Info_3.text}</Text>
+                <Image style={styles.image} source={{uri:"https://www.sikarin.com/wp-content/uploads/2021/07/14032015791791-1-1024x1024.jpg"}}/>
+                <Text style={styles.descriptions}>{Info_4.text}</Text>
+                </View>
+
+              <View style={styles.cardView}>      
+                <Text style={styles.title}>สาเหตุที่ทำให้โควิด-19 (COVID-19) ติดต่อกันได้ง่าย</Text>
+                <Image style={styles.image} source={{uri:"https://img.vixdata.io/pd/webp-large/pt/sites/default/files/v/virus-gripe-mascara-0320-1400x800.jpg"}}/>
               
-              <Text style={styles.text_h2}>1.ตำแหน่งเซลล์แรกที่ COVID-19 เข้าไปโจมตี</Text>
-              <Text style={styles.text_normal}>{Info_5.text}</Text>
+                <Text style={styles.title1}>1.ตำแหน่งเซลล์แรกที่ COVID-19 เข้าไปโจมตี</Text>
+                <Text style={styles.descriptions}>{Info_5.text}</Text>
 
-              <Text style={styles.text_h2}>2.COVID-19 มีระยะฟักตัวนาน </Text>
-              <Text style={styles.text_normal}>{Info_6.text}</Text>
+                <Text style={styles.title1}>2.COVID-19 มีระยะฟักตัวนาน </Text>
+                <Text style={styles.descriptions}>{Info_6.text}</Text>
 
-              <Text style={styles.text_h2}>3.COVID-19 มีระยะเวลาแพร่เชื้อนาน</Text>
-              <Text style={styles.text_normal}>{Info_7.text}</Text>
+                <Text style={styles.title1}>3.COVID-19 มีระยะเวลาแพร่เชื้อนาน</Text>
+                <Text style={styles.descriptions}>{Info_7.text}</Text>
 
-              <Text style={styles.text_h2}>4.อัตราการเสียชีวิตค่อนข้างต่ำ</Text>
-              <Text style={styles.text_normal}>{Info_8.text}</Text>
+                <Text style={styles.title1}>4.อัตราการเสียชีวิตค่อนข้างต่ำ</Text>
+                <Text style={styles.descriptions}>{Info_8.text}</Text>
               </View>
           </View>
         </ScrollView>
@@ -69,61 +62,46 @@ const PageInfo4 = ({navigation}) => {
         );
       }  
 
+      const { width, height } = Dimensions.get("screen");
+      const styles = StyleSheet.create({
+       
+      cardView: {
+          backgroundColor: 'white',
+          margin: width * 0.03,
+          borderRadius: width * 0.05,
+          shadowColor: '#000',
+          shadowOffset: { width:0.5, height: 0.5 },
+          shadowOpacity: 0.5,
+          shadowRadius: 3
+      },
+      title: {
+          marginHorizontal: width * 0.05,
+          marginVertical: width * 0.03,
+          color: 'black',
+          fontSize: 20,
+          fontWeight: 'bold'
+  
+      },
+      title1: {
+        marginHorizontal: width * 0.05,
+        marginVertical: width * 0.03,
+        color: 'black',
+        fontSize: 18,
+        fontWeight: 'bold'
 
-    const styles = StyleSheet.create({
-        text_h1:{
-          color:'black',
-          fontSize:22,
-          textAlign:'center',
-          paddingBottom:20,
-          fontWeight:'bold',
-          paddingTop:20
-      },
-      text_h2:{
-        color:'black',
-        fontSize:20,
-        textAlign:'left',
-        paddingLeft:15,
-        paddingTop:10,
-        fontWeight:'bold'
-      },
-      cardImage1:{
-        width:'50%',
-        height:180,
-        borderRadius:70,
-        paddingRight:20
     },
-    cardImage2:{
-        width:'100%',
-        height:180,
-        borderRadius:40,
-        paddingTop:20
-    },
-    text_image1:{
-      color:'black',
-      width:'50%',
-      textAlign:'center',
-      fontSize:25,
-      fontWeight: "bold",
-      paddingLeft:20
-  },
-  text_image2:{
-    paddingTop:10,
-    paddingLeft:35,
-    paddingRight:15,
-    color:'black',
-    width:'40%',
-    textAlign:'left',
-    fontSize:15, 
-},
-    text_normal:{
-      paddingTop:20,
-  paddingBottom:30,
-  color:'black',
-  textAlign:'left',
-  fontSize:20, 
-  paddingLeft:15,
-  paddingRight:15,
-},
-    })
+      descriptions: {
+          margin: width *0.03,
+          color: 'gray',
+          fontSize: 18
+      },
+      image: {
+          height: height / 4,
+          marginLeft: width/60,
+          marginRight: width/66,
+          marginVertical: height * 0.02
+      },
+    
+  
+  })
 export default PageInfo4;

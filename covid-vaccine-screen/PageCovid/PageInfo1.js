@@ -1,5 +1,5 @@
 import React from 'react'
-import {Text,StyleSheet, View,Image } from 'react-native'
+import {Dimensions,Text,StyleSheet, View,Image } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 const PageInfo1 = ({ navigation }) => {
   const Info_1 = {
@@ -14,78 +14,56 @@ const PageInfo1 = ({ navigation }) => {
       return(
           <ScrollView>
           <View >
-            {/* Topic header */}
-              <Text style={styles.text_h1}>โควิด-19 คืออะไร ?</Text> 
             {/* text and image on one line */}
-              <View style={{flexDirection:'row',alignItems:'center'}} >
-                <Image style={styles.cardImage1} source={{uri:'https://www.ram-hosp.co.th/upload/ck/1584183110.jpg'}}/>
-                <Text style={styles.text_image1}>{Info_1.text}</Text>
-              </View>
-            {/* text normal */}
-              <View>
-              <Text style={styles.text_normal}>{Info_2.text}</Text>
-              </View>
-              {/* text and image on one line */}              
-                <Image style={styles.cardImage2} source={{uri:'https://www.gj.mahidol.ac.th/main/wp-content/uploads/2020/04/3591889-1280x853.jpg'}}/> 
-                <Text style={styles.text_normal}>{Info_3.text}</Text>            
+            <View style={styles.cardView}>
+                <Text style={styles.title}>โควิด-19 คืออะไร</Text>
+                <Image style={styles.image} source={{uri:'https://www.ram-hosp.co.th/upload/ck/1584183110.jpg'}}/>
+                <Text style={styles.descriptions}>{Info_1.text}</Text>
+                <Text style={styles.descriptions}>{Info_2.text}</Text>
+            </View>
+              {/* text and image on one line */}   
+              <View style={styles.cardView}>     
+                <Text style={styles.title}>โควิด-19แพร่ระบาดเมื่อไหร่</Text>
+                <Image style={styles.image} source={{uri:'https://www.gj.mahidol.ac.th/main/wp-content/uploads/2020/04/3591889-1280x853.jpg'}}/> 
+                <Text style={styles.descriptions}>{Info_3.text}</Text>   
+                </View>          
           </View>
           </ScrollView>
         );
       }  
 
-
+    const { width, height } = Dimensions.get("screen");
     const styles = StyleSheet.create({
-
-        text_h1:{
-          color:'black',
-          fontSize:22,
-          textAlign:'center',
-          paddingBottom:20,
-          fontWeight:'bold',
-          paddingTop:20
-      },
-      cardImage1:{
-        width:190,
-        height:185,
-        borderRadius:20,
-        paddingLeft:20
+     
+    cardView: {
+        backgroundColor: 'white',
+        margin: width * 0.03,
+        borderRadius: width * 0.05,
+        shadowColor: '#000',
+        shadowOffset: { width:0.5, height: 0.5 },
+        shadowOpacity: 0.5,
+        shadowRadius: 3
     },
-    cardImage2:{
-      width:'100%',
-      height:180,
-      borderRadius:30,
-      resizeMode:'center',
-      paddingBottom:10,
+    title: {
+        marginHorizontal: width * 0.05,
+        marginVertical: width * 0.03,
+        color: 'black',
+        fontSize: 20,
+        fontWeight: 'bold'
 
-
-  },
-    text_image1:{
-      color:'black',
-      width:'50%',
-      textAlign:'left',
-      fontSize:20, 
-      paddingLeft:10,
-      paddingRight:5
-  },
-  text_image2:{
-    paddingTop:10,
-    paddingLeft:35,
-    paddingRight:15,
-    paddingBottom:20,
-    color:'black',
-    width:'40%',
-    textAlign:'left',
-    fontSize:20, 
-},
-    text_normal:{
-      paddingTop:30,
-      paddingBottom:30,
-      color:'black',
-      textAlign:'left',
-      fontSize:20, 
-      paddingLeft:15,
-      paddingRight:15,
-
-},
-    })
+    },
+    descriptions: {
+        margin: width *0.03,
+        color: 'gray',
+        fontSize: 18
+    },
+    image: {
+        height: height / 4,
+        marginLeft: width/60,
+        marginRight: width/66,
+        marginVertical: height * 0.02
+    },
+    
+  
+})
 export default PageInfo1;

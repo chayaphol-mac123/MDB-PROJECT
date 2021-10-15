@@ -1,5 +1,5 @@
 import React from 'react'
-import {Text,StyleSheet, View,Image } from 'react-native'
+import {Dimensions,Text,StyleSheet, View,Image } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 const PageInfo2 = ({navigation}) => {
   const Info_1 = {
@@ -18,89 +18,57 @@ const PageInfo2 = ({navigation}) => {
 
       return(
         <ScrollView>
-          <View >
-            {/* Topic header */}
-              <Text style={styles.text_h1}>ต้นกําเนิดของไวรัสCovid-19</Text>
+          <View>
             {/* text normal */}
-              <View>
-              <Text style={styles.text_normal}>{Info_1.text}</Text>
-              </View>
-              {/* text and image on one line */}
-              <View style={{flexDirection:'row',alignItems:'center'}} > 
-                <Text style={styles.text_image2}>{Info_2.text}</Text>
-                <Image style={styles.cardImage2} source={{uri:'https://www.prachachat.net/wp-content/uploads/2020/02/12-3-%E0%B8%82%E0%B8%B5%E0%B9%88%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B9%81%E0%B8%AA-%E0%B9%84%E0%B8%A7%E0%B8%A3%E0%B8%B1%E0%B8%AA%E0%B8%AD%E0%B8%B9%E0%B9%88%E0%B8%AE%E0%B8%B1%E0%B9%88%E0%B8%99-PM2.5.jpg'}}/> 
+              <View style={styles.cardView}>
+                <Text style={styles.title}>ต้นกําเนิดของไวรัสCovid-19</Text>
+                <Text style={styles.descriptions}>{Info_1.text}</Text>  
+                <Text style={styles.descriptions}>{Info_2.text}</Text>
+                <Image style={styles.image} source={{uri:'https://www.prachachat.net/wp-content/uploads/2020/02/12-3-%E0%B8%82%E0%B8%B5%E0%B9%88%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B9%81%E0%B8%AA-%E0%B9%84%E0%B8%A7%E0%B8%A3%E0%B8%B1%E0%B8%AA%E0%B8%AD%E0%B8%B9%E0%B9%88%E0%B8%AE%E0%B8%B1%E0%B9%88%E0%B8%99-PM2.5.jpg'}}/> 
               </View>
               {/* text normal */}
-              <View>
-              <Text style={styles.text_normal}>{Info_3.text}</Text>
-              </View>
-              <View style={{flexDirection:'row',alignItems:'center'}} >
-                <Image style={styles.cardImage1} source={{uri:'https://ichef.bbci.co.uk/news/640/cpsprodpb/C42C/production/_116502205_160dca3a-9076-4ded-a3ef-d898625faba8.jpg'}}/>
-                <Text style={styles.text_image1}>{Info_4.text}</Text>
-              </View>
-
-              
-              
+              <View style={styles.cardView}>
+              <Text style={styles.title}>พาหะที่นำไวรัสมาจากไหน?</Text>
+                <Text style={styles.descriptions}>{Info_3.text}</Text>
+                <Image style={styles.image} source={{uri:'http://www.newtv.co.th/images/thumbnail/l/20170601083732_l.jpg'}}/>
+                <Text style={styles.descriptions}>{Info_4.text}</Text>
+              </View>  
           </View>
         </ScrollView>
           
         );
       }  
-
-
+     const { width, height } = Dimensions.get("screen");
     const styles = StyleSheet.create({
-        text:{
-            color:'black',
-            fontSize:24,
-            textAlign:'left',
-            paddingLeft:15
-        },
-        text_h1:{
-          color:'black',
-          fontSize:22,
-          textAlign:'center',
-          fontWeight:'bold',
-          paddingTop:20
-      },
-      text_normal:{
-      paddingTop:30,
-      paddingBottom:30,
-      color:'black',
-      textAlign:'left',
-      fontSize:20, 
-      paddingLeft:15,
-      paddingRight:15,
-      },
-      cardImage1:{
-        width:180,
-        height:185,
-        borderRadius:30,
-        paddingRight:10,
-        paddingLeft:5,
-        paddingBottom:20
+     
+    cardView: {
+        backgroundColor: 'white',
+        margin: width * 0.03,
+        borderRadius: width * 0.05,
+        shadowColor: '#000',
+        shadowOffset: { width:0.5, height: 0.5 },
+        shadowOpacity: 0.5,
+        shadowRadius: 3
     },
-    cardImage2:{
-      width:180,
-      height:180,
-      borderRadius:20,
+    title: {
+        marginHorizontal: width * 0.05,
+        marginVertical: width * 0.03,
+        color: 'black',
+        fontSize: 20,
+        fontWeight: 'bold'
 
-
-  },
-  text_image1:{
-    color:'black',
-    width:'50%',
-    textAlign:'left',
-    fontSize:20, 
-    paddingLeft:20,
-    paddingBottom:20
-},
-  text_image2:{
-    color:'black',
-      width:'50%',
-      textAlign:'left',
-      fontSize:20, 
-      paddingLeft:20
-},
-  
-    })
+    },
+    descriptions: {
+        margin: width *0.03,
+        color: 'gray',
+        fontSize: 18
+    },
+    image: {
+        height: height / 4,
+        marginLeft: width/60,
+        marginRight: width/66,
+        marginVertical: height * 0.02
+    },
+    
+})
 export default PageInfo2;

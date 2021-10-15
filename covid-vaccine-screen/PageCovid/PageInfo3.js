@@ -1,5 +1,5 @@
 import React from 'react'
-import {Text,StyleSheet, View,Image } from 'react-native'
+import {Dimensions,Text,StyleSheet, View,Image } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 const PageInfo3 = ({navigation}) => {
   const Info_1 = {
@@ -27,67 +27,60 @@ const PageInfo3 = ({navigation}) => {
 
       return(
         <ScrollView>
-           <View > 
-            {/* text and image on one line */}
-            <Text style={styles.text_h1}>อาการของผู้ติดเชื้อCovid-19</Text>
-              <View style={{flexDirection:'row',alignItems:'center'}} >
+          <View>
+           <View style={styles.cardView}> 
+                <Text style={styles.title}>อาการของผู้ติดเชื้อCovid-19</Text>
                 <Image style={styles.cardImage1} source={{uri:"https://www.hfocus.org/sites/default/files/picture_cover/4d08903e-712b-4ad8-bc96-b0d0bd57cf30.jpeg"}}/>
-              </View>
-            {/* text normal */}
-              <View>
-              <Text style={styles.text_h2}>1.มีอาการไข้</Text>
-              <Text style={styles.text_normal}>{Info_1.text}</Text>
+                <Text style={styles.text_h2}>1.มีอาการไข้</Text>
+                <Text style={styles.text_normal}>{Info_1.text}</Text>
 
-              <Text style={styles.text_h2}>2.ไอแห้ง </Text>
-              <Text style={styles.text_normal}>{Info_2.text}</Text>
+                <Text style={styles.text_h2}>2.ไอแห้ง </Text>
+                <Text style={styles.text_normal}>{Info_2.text}</Text>
 
-              <Text style={styles.text_h2}>3.จมูกไม่ได้กลิ่น ลิ้นไม่รับรส</Text>
-              <Text style={styles.text_normal}>{Info_3.text}</Text>
+                <Text style={styles.text_h2}>3.จมูกไม่ได้กลิ่น ลิ้นไม่รับรส</Text>
+                <Text style={styles.text_normal}>{Info_3.text}</Text>
 
-              <Text style={styles.text_h2}>4.หายใจลำบาก</Text>
-              <Text style={styles.text_normal}>{Info_4.text}</Text>
+                <Text style={styles.text_h2}>4.หายใจลำบาก</Text>
+                <Text style={styles.text_normal}>{Info_4.text}</Text>
 
-              <Text style={styles.text_h2}>5.ตาแดง ผื่นขึ้น</Text>
-              <Text style={styles.text_normal}>{Info_5.text}</Text>
+                <Text style={styles.text_h2}>5.ตาแดง ผื่นขึ้น</Text>
+                <Text style={styles.text_normal}>{Info_5.text}</Text>
               </View>
 
               {/* text and image on one line */}
-              <View>
-              <Text style={styles.text_h1_test}>การเติบโตของยอดผู้ติดเชื้อ</Text>
-              </View>
+              <View style={styles.cardView}>
+                <Text style={styles.title}>การเติบโตของยอดผู้ติดเชื้อ</Text>
                 <Image style={styles.cardImage2} source={{uri:'https://www.matichon.co.th/wp-content/uploads/2020/04/706354.jpg'}}/> 
                 <Text style={styles.text_normal}>{Info_6.text}</Text>    
-              {/* text normal */}
-              <View>
-              <Text style={styles.text_normal}>{Info_7.text}</Text>
+                <Text style={styles.text_normal}>{Info_7.text}</Text>
               </View>
               
-              
-          </View>
+            </View>
         </ScrollView>
          
         );
       }  
 
-
+      const { width, height } = Dimensions.get("screen");
     const styles = StyleSheet.create({
-        text_h1:{
-          color:'black',
-          fontSize:22,
-          textAlign:'center',
-          paddingBottom:20,
-          fontWeight:'bold',
-          paddingTop:20
-      },
-      text_h1_test:{
-        color:'black',
-        fontSize:22,
-        textAlign:'left',
-        paddingBottom:20,
-        fontWeight:'bold',
-        paddingTop:20,
-        paddingLeft:15,
+      cardView: {
+        backgroundColor: 'white',
+        margin: width * 0.03,
+        borderRadius: width * 0.05,
+        shadowColor: '#000',
+        shadowOffset: { width:0.5, height: 0.5 },
+        shadowOpacity: 0.5,
+        shadowRadius: 3
     },
+    title: {
+      marginHorizontal: width * 0.05,
+      marginVertical: width * 0.03,
+      color: 'black',
+      fontSize: 20,
+      fontWeight: 'bold'
+
+  },
+     
       text_h2:{
         color:'black',
         fontSize:20,
@@ -110,28 +103,16 @@ const PageInfo3 = ({navigation}) => {
 
 
   },
-    text_image1:{
-      color:'black',
-      width:'70%',
-      textAlign:'right',
-      fontSize:15, 
-  },
-  text_image2:{
-    paddingTop:10,
-    paddingLeft:20,
-    color:'black',
-    width:'50%',
-    textAlign:'left',
-    fontSize:20, 
-},
+   
 text_normal:{
   paddingTop:20,
   paddingBottom:30,
   color:'black',
   textAlign:'left',
-  fontSize:20, 
   paddingLeft:15,
   paddingRight:15,
+  color: 'gray',
+  fontSize: 18
   },
     })
 export default PageInfo3;
