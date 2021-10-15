@@ -10,6 +10,10 @@ const imageInfo_1 = {
     uri: "https://cdn.discordapp.com/attachments/877781772052602913/898131901531947018/halting-workplace-01.png"
   }
 
+const imageInfo_2 = {
+    uri: "https://cdn.discordapp.com/attachments/877781772052602913/898463365033242624/143379-zznnuawaaq-1593082280.png"
+}
+
 const TrickcovidScreen = ({navigation}) => {
     return (
        <View style={styles.container}>
@@ -30,7 +34,7 @@ const TrickcovidScreen = ({navigation}) => {
            </View>
 
            <TouchableOpacity onPress={() => navigation.navigate('VdoScreen')}>
-                <Card2  title="VideoTrickCovid" />
+                <Card2  title="VideoTrickCovid" uri={imageInfo_2} />
            </TouchableOpacity>
            
        </View>

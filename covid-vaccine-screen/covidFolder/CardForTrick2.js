@@ -5,8 +5,8 @@ const Card = (props) => {
   return(
     
          <TouchableOpacity style={styles.card}>
-            {/* <Image source={props.uri} style={styles.cardImage} /> */}
-            <Text style={styles.cardText}>{props.title}</Text>
+            <Image source={props.uri} style={styles.cardImage} />
+            {/* <Text style={styles.cardText}>{props.title}</Text> */}
         </TouchableOpacity>
     );
   }  
@@ -20,17 +20,19 @@ const styles = StyleSheet.create({
   },
   card:{
     backgroundColor: 'crimson',
-    width: 350,
+    width: 320,
     height: 175,
-    margin: 20,
+    marginHorizontal: 35,
+    marginVertical: 20,
     justifyContent: 'center',
     borderRadius: 10,
     alignItems: 'center',
   },
  cardImage:{
-    width:'100%',
-    height:140,
+    width: 300,
+    height:150,
     resizeMode:'center',
+    borderRadius: 10,
 },
   cardText:{
     padding:10,

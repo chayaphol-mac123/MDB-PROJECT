@@ -94,6 +94,21 @@ const App = () => {
         <AppStack.Screen
           name="VdoScreen"
           component={VdoScreen}
+          options={{
+            title: 'VDO Trick Covid',
+            headerStyle: {
+              backgroundColor: 'dodgerblue',
+              shadowColor: 'black',
+              elevation: 0,
+              
+            },
+            headerTitleAlign: 'center',
+            headerTitleStyle: {
+              fontSize: 25,
+              color: 'white',
+              fontWeight: 'bold',
+            }
+          }}
         />
 
         {/* Dollar Screen */}
