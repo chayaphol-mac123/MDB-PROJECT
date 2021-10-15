@@ -14,7 +14,7 @@ const TrickScreen1 = ({navigation}) => {
 
     return(
         <ScrollView>
-            <View>
+            <View style={{borderWidth: 10, borderColor: 'cadetblue'}}>
 
                 <View style={styles.header}>
                     <Text style={styles.textHeader}>8 จุดสะสม</Text>
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     image: {
         width: 300,
         height: 200,
-        marginLeft: 25,
+        marginLeft: 19,
         marginTop: 10,
         justifyContent: 'center',
     },

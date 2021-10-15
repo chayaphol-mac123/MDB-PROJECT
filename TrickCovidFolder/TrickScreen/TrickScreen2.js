@@ -15,7 +15,7 @@ const TrickScreen2 = ({navigation}) => {
 
         <ScrollView>
 
-            <View>
+            <View style={{borderWidth: 10, borderColor: 'cornflowerblue'}}>
                 <View style={styles.header}>
                     <Text style={styles.textHeader}>7 วิธีการเอาตัวรอด</Text>
                     <Text style={styles.textHeader}>เมื่อต้องออกนอกบ้าน</Text>
@@ -98,8 +98,8 @@ const styles = StyleSheet.create({
     image: {
         width: 300,
         height: 200,
-        marginLeft: 25,
-        marginTop: 10,
+        marginLeft: 19,
+        marginTop: 12,
         justifyContent: 'center',
     },
     highlightText:{
