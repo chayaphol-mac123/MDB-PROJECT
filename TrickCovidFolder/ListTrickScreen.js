@@ -22,6 +22,10 @@ const ListTrickScreen = ({navigation}) => {
                     <Card title="เมื่อรู้ตัวว่าติดโควิดต้องทำอย่างไร!">List Screen Covid</Card>
                 </TouchableOpacity>
 
+                <TouchableOpacity onPress={() => navigation.navigate('PhoneNumberCovid')}>
+                    <Card title="รวมสายด่วนโควิด">List Screen Covid</Card>
+                </TouchableOpacity>
+
             </View>
         </ScrollView>
  
