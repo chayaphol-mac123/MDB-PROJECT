@@ -18,7 +18,9 @@ const ListTrickScreen = ({navigation}) => {
                     <Card title="7 วิธีการเอาตัวรอดในยุคโควิด">List Screen Covid</Card>
                 </TouchableOpacity>
 
-                <Card title="6 วิธีทำโปรเจคให้เสร็จทันเวลา">List Screen Covid</Card>
+                <TouchableOpacity onPress={() => navigation.navigate('TrickScreen3')}>
+                    <Card title="เมื่อรู้ตัวว่าติดโควิดต้องทำอย่างไร!">List Screen Covid</Card>
+                </TouchableOpacity>
 
             </View>
         </ScrollView>

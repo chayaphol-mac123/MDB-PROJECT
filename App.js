@@ -28,6 +28,8 @@ import Sinopharm from './covid-vaccine-screen/PageVaccine/Sinopharm';
 import Pfizer from './covid-vaccine-screen/PageVaccine/Pfizer';
 import Sinovac from './covid-vaccine-screen/PageVaccine/Sinovac';
 import VdoScreen from './TrickCovidFolder/VdoScreen/VdoScreen1';
+import TrickScreen3 from './TrickCovidFolder/TrickScreen/TrickScreen3';
+import PhoneNumberCovid from './TrickCovidFolder/TrickScreen/PhoneNumberCovid';
 
 
 const AppStack = createStackNavigator();
@@ -77,6 +79,12 @@ const App = () => {
         />
 
         <AppStack.Screen
+          name="PhoneNumberCovid"
+          component={PhoneNumberCovid}
+          
+        />
+
+        <AppStack.Screen
           name="TrickScreen1"
           component={TrickScreen1}
           options={{
@@ -87,6 +95,14 @@ const App = () => {
         <AppStack.Screen
           name="TrickScreen2"
           component={TrickScreen2}
+          options={{
+            title: '',
+          }}
+        />
+
+        <AppStack.Screen
+          name="TrickScreen3"
+          component={TrickScreen3}
           options={{
             title: '',
           }}
