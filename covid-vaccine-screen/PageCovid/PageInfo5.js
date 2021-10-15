@@ -45,12 +45,6 @@ const PageInfo5 = ({navigation}) => {
   const Info_33 = {
     text: "- สวมหน้ากากอนามัย เว้นระยะห่าง หมั่นล้างมือ"
   }
-
-
-
-  
-  
-
       return(
           <ScrollView>
               <View > 
@@ -145,14 +139,13 @@ const PageInfo5 = ({navigation}) => {
     textAlign:'left',
     fontSize:20, 
 },
-    text_normal:{
-
-      color:'black',
-      textAlign:'left',
-      fontSize:20, 
-      paddingLeft:10,
-      paddingRight:10,
-      paddingBottom:10,
+  text_normal:{
+    paddingBottom:30,
+    color:'black',
+    textAlign:'left',
+    fontSize:20, 
+    paddingLeft:15,
+    paddingRight:15,
 },
     })
 export default PageInfo5;

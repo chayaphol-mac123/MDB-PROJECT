@@ -2,17 +2,17 @@ import React from 'react'
 import {Text,StyleSheet, View,Image, ScrollView } from 'react-native'
 const PageInfo6 = ({navigation}) => {
   const Info_1 = {
-    text: "     หน้ากากอนามัยที่กระชับกับใบหน้าช่วยป้องกันไม่ให้ผู้ที่สวมแพร่กระจายไวรัสไปยังผู้อื่น อย่างไรก็ตาม หน้ากากอนามัยเพียงอย่างเดียวป้องกันเชื้อโควิด-19 ไม่ได้ จึงควรรักษาระยะห่างและหมั่นทำความสะอาดมือร่วมด้วย"
+    text: "     หน้ากากอนามัยที่กระชับกับใบหน้าช่วยป้องกันไม่ให้ผู้ที่สวมแพร่กระจายไวรัสไปยังผู้อื่น ควรรักษาระยะห่างและหมั่นทำความสะอาดมือร่วมด้วย"
   }
   const Info_2 = {
-    text:"      หากมีไข้ ไอ และหายใจลำบาก โปรดไปพบแพทย์ โดยติดต่อล่วงหน้าเพื่อที่ผู้ให้บริการด้านสุขภาพจะได้แนะนำให้คุณไปยังสถานพยาบาลที่ถูกต้อง ซึ่งจะช่วยปกป้องคุณ รวมถึงป้องกันการแพร่กระจายของไวรัสและการติดเชื้ออื่นๆ"
+    text:"      หากมีอาการผิดปกติโปรดไปพบแพทย์ โดยติดต่อล่วงหน้าเพื่อที่ผู้ให้บริการด้านสุขภาพแนะนำไปยังสถานพยาบาลที่ถูกต้อง"
   }
       return(
           <ScrollView>
               <View > 
             {/* text and image on one line */}
             <Text style={styles.text_h1}>มาตราการป้องกันCovid-19</Text>
-            <Text style={styles.text_h2}>ยึดหลัก D-M-H-T-T ป้องกันโควิด-19</Text>
+            <Text style={styles.text_h2test}>ยึดหลัก D-M-H-T-T ป้องกันโควิด-19</Text>
               <View style={{flexDirection:'row',alignItems:'center'}} >
                 <Image style={styles.cardImage1} source={{uri:"https://www.bangpakok3.com/upload/IMG_72402.JPG"}}/>
               </View>
@@ -29,10 +29,8 @@ const PageInfo6 = ({navigation}) => {
                 <Image style={styles.cardImage2} source={{uri:'http://healthydee.moph.go.th/backend/fileAttach/30082019_080616-0000001839.jpg'}}/>
                 <Text style={styles.text_image2}>{Info_1.text}</Text>
               </View>
-              <View style={{flexDirection:'row',alignItems:'center'}} >
-                <Text style={styles.text_image2}>{Info_2.text}</Text>
-                <Image style={styles.cardImage2} source={{uri:'https://res.cloudinary.com/dk0z4ums3/image/upload/v1604633608/attached_image_th/%E0%B8%AB%E0%B8%B2%E0%B8%A2%E0%B9%83%E0%B8%88%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%AD%E0%B8%B4%E0%B9%88%E0%B8%A1-%E0%B8%AD%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B8%B1%E0%B8%99%E0%B8%95%E0%B8%A3-pobpad.jpg'}}/>
-                
+              <View >
+                <Text style={styles.text_normallast}>{Info_2.text}</Text>
               </View>
 
             
@@ -60,8 +58,17 @@ const PageInfo6 = ({navigation}) => {
         paddingLeft:15,
         paddingTop:10,
         fontWeight:'bold',
-        paddingBottom:20
+        paddingBottom:10
     },
+    text_h2test:{
+      color:'black',
+      fontSize:20,
+      textAlign:'center',
+      paddingLeft:15,
+      paddingTop:10,
+
+      paddingBottom:10
+  },
       cardImage1:{
         width:'100%',
         height:300,
@@ -79,7 +86,7 @@ const PageInfo6 = ({navigation}) => {
       color:'black',
       width:'70%',
       textAlign:'right',
-      fontSize:15, 
+      fontSize:20, 
   },
   text_image2:{
     paddingTop:10,
@@ -98,5 +105,16 @@ const PageInfo6 = ({navigation}) => {
       paddingRight:10,
       paddingBottom:20,
 },
+  text_normallast:{
+
+    color:'black',
+    textAlign:'left',
+    fontSize:20, 
+    paddingLeft:10,
+    paddingRight:10,
+    paddingBottom:20,
+    paddingTop:30
+},
+
     })
 export default PageInfo6;

@@ -13,22 +13,22 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 const App = ({ navigation }) => {
   const imageInfo_1 = {
-    uri: "https://www.gj.mahidol.ac.th/main/wp-content/uploads/2020/04/Picture1_Covid.png"
+    uri: "https://www.ram-hosp.co.th/upload/ck/1584183110.jpg"
   }
   const imageInfo_2 = {
-    uri: "https://www.nsm.or.th/images/SciKnowleadge/batscovid1.jpg"
+    uri: "https://chulalongkornhospital.go.th/kcmh/wp-content/uploads/2021/04/COVID19.jpg"
   }
   const imageInfo_3 = {
-    uri: "https://www.engdict.com/data/dict/media/images_public/fever-00023495637248044863535322_normal.png"
+    uri: "https://cdn.bangkokhospital.com/2021/04/shutterstock_1678565335.jpg"
   }
   const imageInfo_4 = {
-    uri: "https://1.bp.blogspot.com/-U6dLRypOoTA/XrNTWcMZxEI/AAAAAAAAAYU/DS6I8Z15tu4Ptw8JqliHKYFprU9uwBHEgCEwYBhgL/s1600/3A286FF9-AEF0-4669-A8CE-9FF947B2C91A.jpeg"
+    uri: "https://www.news-medical.net/image.axd?picture=2021%2F8%2Fshutterstock_1696572103.jpg"
   }
   const imageInfo_5 = {
     uri: "https://hilight.kapook.com/img_cms2/user/rungtip/varaity/57797-new-997968.jpg"
   }
   const imageInfo_6 = {
-    uri: "https://www.img.in.th/images/8ca81b0c44443fb99bd2f3d2ab8eae21.jpg"
+    uri: "https://image.freepik.com/free-vector/face-mask-prevention-against-coronavirus-background_52683-48291.jpg"
   }
   const imageInfo_7 = {
     uri: "https://www.eurolab.net/images/jenerik/kategori/kuresel-pazar-analizleri.jpg"
