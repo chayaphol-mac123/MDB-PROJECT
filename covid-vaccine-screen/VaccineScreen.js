@@ -45,6 +45,16 @@ const ShowVaccine = ({navigation}) => {
                 </View>
             </View>
             <View style={styles.imageContainer}>
+                <View style={styles.imageView}>
+                    <Image source={require("./ImageVaccine/pfizer1.jpg")} style={styles.image}/>
+                </View>
+            </View>
+            <View style={styles.buttonContainer}>
+                <View style={styles.buttonView}>
+                    <Button title="Sinovac" onPress={() => navigation.navigate('Sinovac')} />
+                </View>
+            </View>
+            <View style={styles.imageContainer}>
             </View>
            </View>
         </ScrollView>

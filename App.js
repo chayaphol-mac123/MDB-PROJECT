@@ -26,6 +26,7 @@ import Moderna from './covid-vaccine-screen/PageVaccine/Moderna';
 import Astra from './covid-vaccine-screen/PageVaccine/Astra';
 import Sinopharm from './covid-vaccine-screen/PageVaccine/Sinopharm';
 import Pfizer from './covid-vaccine-screen/PageVaccine/Pfizer';
+import Sinovac from './covid-vaccine-screen/PageVaccine/Sinovac';
 import VdoScreen from './TrickCovidFolder/VdoScreen/VdoScreen1';
 
 
@@ -165,6 +166,11 @@ const App = () => {
         <AppStack.Screen
           name="Pfizer"
           component={Pfizer}
+        />
+
+        <AppStack.Screen
+          name="Sinovac"
+          component={Sinovac}
         />
 
       </AppStack.Navigator>

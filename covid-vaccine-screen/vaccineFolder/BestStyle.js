@@ -23,6 +23,7 @@ export const styles = StyleSheet.create({
     imageContainer: {
         flexDirection: "row",
         marginTop: 20,
+        marginLeft:15,
     },
 
     imageView: {
@@ -64,6 +65,7 @@ export const styles = StyleSheet.create({
     buttonContainer: {
         flexDirection: "row",
         marginTop: 5,
+        marginLeft:15,
     },
 
     buttonView: {
