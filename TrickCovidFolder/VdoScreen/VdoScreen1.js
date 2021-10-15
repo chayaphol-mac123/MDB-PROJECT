@@ -33,7 +33,19 @@ const VdoScreen = ({navigation}) => {
             </View>
 
 
-            
+            <View style={[styles.textUpperVdoView,styles.colorpink2]}>
+                <Text style={styles.textUpperVdo}>Trick Covid1</Text>
+            </View>
+            <View style={styles.vdoBody}>
+                <YoutubePlayer 
+                height={300}
+                play={false}
+                videoId={'89vH_OmGg3g'}
+                width={350}
+                />
+            </View>
+
+
             
            
         </View>
@@ -46,6 +58,9 @@ export default VdoScreen;
 const styles = StyleSheet.create({
     colorpink1: {
         backgroundColor: 'hotpink',
+    },
+    colorpink2: {
+        backgroundColor: 'crimson',
     },
     header: {
         alignItems: 'center',
