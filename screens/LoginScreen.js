@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {View, Text, Button, StyleSheet, TouchableOpacity, Image, ActivityIndicator} from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, Button, StyleSheet, TouchableOpacity, Image, ActivityIndicator } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign'
 
 import FormInput from '../components/FormInput';
@@ -8,46 +8,52 @@ import SocialButton from '../components/SocialButton';
 import { Component } from 'react';
 import { tsConstructorType } from '@babel/types';
 
-const LoginScreen = ({navigation}) => {
-    // constructor()
-    // {
-    //     super()
-    //     showME: true
-    // }
+export default class LoginScreen extends Component {
+    constructor() {
+        super()
+        this.state={
+            showME: true
+        }
+    }
 
-    // compoenntWillMount()
-    // {
-    //     setTimeout(()=>{
+    componentDidMount() {
+        setTimeout(() => {
+        this.props.navigation.navigate('Main')
+    }, 
+        2000)
+    }
+    render() {
+        return (
+            <View style={styles.container}>
+                {
+                    this.state.showME ?
+                    <View style={styles.container}>
+                        <Image source={require('../assets/covid-mdbfortest.png')} style={styles.logo}/> 
+                        <Text style={styles.text}>MDB-19</Text>
+                    </View> 
+                        :
+                        <View style={styles.container}>
+                            <Image
+                                source={require('../assets/covid-mdbfortest.png')}
+                                style={styles.logo}
+                            />
+                            <Text style={styles.text}>MDB-19</Text>
 
-    //     },3000)
-    // }
 
-    return (
-        <View style={styles.container}>
-            {/* {
-                this.state.showMe
-            } */}
-        <ActivityIndicator/>
-         <Image
-          source={require('../assets/covid-mdbfortest.png')}
-          style={styles.logo}
-         />
-         <Text style={styles.text}>MDB-19</Text>
-         
+                            {/* <TouchableOpacity style={styles.forgotButton} onPress={() => navigation.navigate('Main')}>
+                                <Text style={styles.navButtonText}>Go to home</Text>
+                            </TouchableOpacity> */}
+                        </View>
 
-        <TouchableOpacity 
-            style={styles.forgotButton} 
-            onPress={() => navigation.navigate('Main')}>
-            <Text style={styles.navButtonText}>Go to home</Text>
-        </TouchableOpacity>
-
-        </View>
-    )
+                }
+            </View>
+        )
+    }
 }
 
-export default LoginScreen;
+// export default LoginScreen;
 
-const styles = StyleSheet.create ({
+const styles = StyleSheet.create({
     container: {
         backgroundColor: '#f9fafd',
         flex: 1,
