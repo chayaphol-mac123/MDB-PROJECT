@@ -6,7 +6,9 @@ const VdoScreen = ({navigation}) => {
     return(
         <ScrollView>
             <View>
+            {/* For Space */}
             <View style={{marginTop: 15}}></View>
+
             <View style={styles.textUpperVdoView}>
                 <Text style={styles.textUpperVdo}>Covid-19 คืออะไร ?</Text>
             </View>
