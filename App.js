@@ -75,13 +75,20 @@ const App = () => {
               elevation: 0,
             },
             headerTitleAlign: 'center',
+            headerTitleStyle: {
+              fontSize: 21,
+              color: 'white',
+              fontWeight: 'bold',
+            }
           }}
         />
 
         <AppStack.Screen
           name="PhoneNumberCovid"
           component={PhoneNumberCovid}
-          
+          options={{
+            title: '',
+          }}
         />
 
         <AppStack.Screen

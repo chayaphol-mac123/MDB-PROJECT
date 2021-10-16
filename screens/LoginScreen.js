@@ -1,71 +1,44 @@
 import React, {useState} from 'react';
-import {View, Text, Button, StyleSheet, TouchableOpacity, Image} from 'react-native';
+import {View, Text, Button, StyleSheet, TouchableOpacity, Image, ActivityIndicator} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign'
 
 import FormInput from '../components/FormInput';
 import FormButton from '../components/FormButton';
 import SocialButton from '../components/SocialButton';
+import { Component } from 'react';
+import { tsConstructorType } from '@babel/types';
 
 const LoginScreen = ({navigation}) => {
-    const [username, setUsername] = useState();
-    const [password, setPassword] = useState();
+    // constructor()
+    // {
+    //     super()
+    //     showME: true
+    // }
+
+    // compoenntWillMount()
+    // {
+    //     setTimeout(()=>{
+
+    //     },3000)
+    // }
+
     return (
         <View style={styles.container}>
+            {/* {
+                this.state.showMe
+            } */}
+        <ActivityIndicator/>
          <Image
           source={require('../assets/covid-mdbfortest.png')}
           style={styles.logo}
          />
          <Text style={styles.text}>MDB-19</Text>
-         {/* UserName */}
-         <FormInput
-            lableValue={username}
-            onChangeText={(userName) => setUsername(userName)}
-            placeholderText="Username"
-            iconType="user"
-            autoCapitalize="none"
-            autoCorrect={false}
-         />
-        {/* Password */}
-        <FormInput
-            lableValue={password}
-            onChangeText={(userPassword) => setPassword(userPassword)}
-            placeholderText="Password"
-            iconType="lock"
-            secureTextEntry={true}
-         />
-
-         <FormButton 
-            buttonTitle="Sign In"
-            onPress={() => alert("Sign In")}
-
-         />
+         
 
         <TouchableOpacity 
             style={styles.forgotButton} 
             onPress={() => navigation.navigate('Main')}>
-            <Text style={styles.navButtonText}>Skip to home</Text>
-        </TouchableOpacity>
-
-        {/* <SocialButton
-            buttonTitle="Skip to home"
-            btnType="facebook"
-            color="#4867aa"
-            backgroundColor="#e6eaf4"
-            onPress={ () => {}}
-        /> */}
-
-        {/* <SocialButton
-            buttonTitle="Sing in with Google"
-            btnType="google"
-            color="#de4d41"
-            backgroundColor="#f5e7ea"
-            onPress={ () => {}}
-        /> */}
-
-        <TouchableOpacity 
-            style={styles.forgotButton} 
-            onPress={() => navigation.navigate('Signup')}>
-            <Text style={styles.navButtonText}>Don't have an account? Create here</Text>
+            <Text style={styles.navButtonText}>Go to home</Text>
         </TouchableOpacity>
 
         </View>

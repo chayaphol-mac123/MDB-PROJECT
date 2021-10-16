@@ -66,7 +66,7 @@ const MainScreen = ({navigation}) => {
           ),
         }}
       />
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Checklist"
         component={ChecklistScreen}
         options={{
@@ -75,7 +75,7 @@ const MainScreen = ({navigation}) => {
             <FontAwesome5 name="check" color={color} size={size} />
           ),
         }}
-      />
+      /> */}
     </Tab.Navigator>
     )
 }
