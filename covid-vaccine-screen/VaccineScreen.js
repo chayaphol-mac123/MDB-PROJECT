@@ -46,7 +46,7 @@ const ShowVaccine = ({navigation}) => {
             </View>
             <View style={styles.imageContainer}>
                 <View style={styles.imageView}>
-                    <Image source={require("./ImageVaccine/pfizer1.jpg")} style={styles.image}/>
+                    <Image source={require("./ImageVaccine/sinovac2.jpg")} style={styles.image}/>
                 </View>
             </View>
             <View style={styles.buttonContainer}>
