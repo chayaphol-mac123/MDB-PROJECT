@@ -16,7 +16,7 @@ const Astra = ({navigation}) => {
     const info_astra8 ="\n https://hdmall.co.th/c/covid-vaccine-astrazeneca";
    
     return(
-        <ScrollView>
+        <ScrollView style={styles.bgpage}>
             {/* <View>
                 <Image source={require("../ImageVaccine/astra2.jpg")} style={styles.imageIm}/>
             </View>
@@ -135,6 +135,10 @@ const styles = StyleSheet.create({
         margin:0.03,
         width: "100%",
         height: height *0.30,
+    },
+
+    bgpage: {
+        backgroundColor: 'lightpink',
     },
 
 })

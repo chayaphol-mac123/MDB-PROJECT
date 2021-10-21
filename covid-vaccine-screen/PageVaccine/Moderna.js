@@ -14,7 +14,7 @@ const Moderna = ({navigation}) => {
         const info_morderna6 = "ผลข้างเคียงของวัคซีนโควิดโมเดอร์นา (Moderna) อาจดูคล้ายกับอาการของไข้หวัดใหญ่ ดังนี้ \nเจ็บ หรือบวมบริเวณที่ฉีด \nอาจมีอาการหนาวสั่น เป็นไข้ \nอาจมีอาการอ่อนเพลีย \nอาจมีอาการปวดหัว \nผลข้างเคียงของวัคซีนโควิดโมเดอร์นา (Moderna) อาจเริ่มแสดงออกภายใน 1-2 วันหลังจากรับวัคซีน โดยอาการจะค่อยๆ ดีขึ้นใน 2-3 วัน";
         const info_morderna7 = "\n https://hdmall.co.th/c/covid-vaccine-moderna";
         return(
-            <ScrollView>
+            <ScrollView style={styles.bgpage}>
                 {/* <View>
                     <Image source={require("../ImageVaccine/moderna2.jpg")} style={styles.imageIm}/>
                 </View>
@@ -136,6 +136,9 @@ const styles = StyleSheet.create({
         margin:0.03,
         width: "100%",
         height: height *0.30,
+    },
+    bgpage: {
+        backgroundColor:'lightblue',
     },
 
 })
