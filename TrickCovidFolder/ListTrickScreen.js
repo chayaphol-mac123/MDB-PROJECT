@@ -5,6 +5,7 @@ import Card from "./CardTrick";
 import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 
 import TrickScreen1 from "./TrickScreen/TrickScreen1";
+import { styles } from "../covid-vaccine-screen/vaccineFolder/BestStyle";
 
 const ListTrickScreen = ({navigation}) => {
 
@@ -28,7 +29,7 @@ const ListTrickScreen = ({navigation}) => {
     }
 
     return(
-        <ScrollView>
+        <ScrollView style={styles2.body}>
             <View>
                 <TouchableOpacity onPress={() => navigation.navigate('TrickScreen1')}>
                     <Card title="8 จุดสะสมโคโรนาไวรัสที่ควรระวัง" uri={imageInfo_1}></Card>
@@ -46,7 +47,7 @@ const ListTrickScreen = ({navigation}) => {
                     <Card title="รวมสายด่วนโควิด" uri={image_Info_4}>List Screen Covid</Card>
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => navigation.navigate('PhoneNumberCovid')}>
+                <TouchableOpacity onPress={() => navigation.navigate('TrickScreen4')}>
                     <Card title="อาการคนติดโควิดเป็นอย่างไร" uri={image_Info_5}>List Screen Covid</Card>
                 </TouchableOpacity>
 
@@ -71,3 +72,9 @@ const ListTrickScreen = ({navigation}) => {
 }
 
 export default ListTrickScreen;
+
+const styles2 = StyleSheet.create({
+    body: {
+        backgroundColor: 'gainsboro',
+    }
+})

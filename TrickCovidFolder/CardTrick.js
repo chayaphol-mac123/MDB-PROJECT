@@ -91,6 +91,7 @@ cardText:{
   fontSize: 18,
   padding: 10,
   fontWeight: 'bold',
+  paddingLeft: 15,
 
 },  
 cardImage: {

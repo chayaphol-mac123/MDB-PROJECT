@@ -135,7 +135,7 @@ export default HomeScreen;
 
 const styles = StyleSheet.create({
     bg: {
-        backgroundColor: '#f9fafd',
+        backgroundColor: 'gainsboro',
         flex: 1,
     },
     container: {

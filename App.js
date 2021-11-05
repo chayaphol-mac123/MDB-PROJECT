@@ -14,6 +14,8 @@ import ListTrickScreen from './TrickCovidFolder/ListTrickScreen';
 
 import TrickScreen1 from './TrickCovidFolder/TrickScreen/TrickScreen1';
 import TrickScreen2 from './TrickCovidFolder/TrickScreen/TrickScreen2';
+import TrickScreen3 from './TrickCovidFolder/TrickScreen/TrickScreen3';
+import TrickScreen4 from './TrickCovidFolder/TrickScreen/TrickScreen4';
 
 import PageInfo1 from './covid-vaccine-screen/PageCovid/PageInfo1';
 import PageInfo2 from './covid-vaccine-screen/PageCovid/PageInfo2';
@@ -28,7 +30,7 @@ import Sinopharm from './covid-vaccine-screen/PageVaccine/Sinopharm';
 import Pfizer from './covid-vaccine-screen/PageVaccine/Pfizer';
 import Sinovac from './covid-vaccine-screen/PageVaccine/Sinovac';
 import VdoScreen from './TrickCovidFolder/VdoScreen/VdoScreen1';
-import TrickScreen3 from './TrickCovidFolder/TrickScreen/TrickScreen3';
+
 import PhoneNumberCovid from './TrickCovidFolder/TrickScreen/PhoneNumberCovid';
 
 
@@ -111,6 +113,14 @@ const App = () => {
         <AppStack.Screen
           name="TrickScreen3"
           component={TrickScreen3}
+          options={{
+            title: '',
+          }}
+        />
+
+      <AppStack.Screen
+          name="TrickScreen4"
+          component={TrickScreen4}
           options={{
             title: '',
           }}

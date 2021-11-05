@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     header: {
-        backgroundColor: 'orangered',
+        backgroundColor: '#f58867',
         alignItems: 'flex-start',
         justifyContent: 'center',
         height: 150,

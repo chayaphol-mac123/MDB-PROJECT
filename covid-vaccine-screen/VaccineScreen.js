@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, ScrollView, Image,Button,Alert} from 'react-native';
+import { View, Text, ScrollView, Image,Button,Alert,StyleSheet} from 'react-native';
 import { styles } from './vaccineFolder/BestStyle';
 
 const ShowVaccine = ({navigation}) => {
@@ -63,3 +63,9 @@ const ShowVaccine = ({navigation}) => {
 }
 
 export default ShowVaccine;
+
+const styles2 = StyleSheet.create({
+    body: {
+        backgroundColor: "gainsboro",
+    }
+})

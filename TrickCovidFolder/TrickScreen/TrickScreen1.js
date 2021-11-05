@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     header: {
-        backgroundColor: 'cadetblue',
+        backgroundColor: '#70ccc7',
         alignItems: 'flex-start',
         justifyContent: 'center',
         height: 150,

@@ -87,6 +87,6 @@ export const styles = StyleSheet.create({
         marginTop: 20,
     },
     bgpage: {
-        backgroundColor:'#f9fafd',
+        backgroundColor:'gainsboro',
     },
 });

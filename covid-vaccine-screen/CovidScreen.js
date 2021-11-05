@@ -34,7 +34,7 @@ const App = ({ navigation }) => {
     uri: "https://www.eurolab.net/images/jenerik/kategori/kuresel-pazar-analizleri.jpg"
   }
   return(
-    <ScrollView>
+    <ScrollView style={styles.body}>
       <Header />
       <View style={styles.pad}>   
 
@@ -76,6 +76,9 @@ const App = ({ navigation }) => {
 
 
 const styles = StyleSheet.create({
+  body: {
+    backgroundColor: 'gainsboro',
+  },
   pad:{
     padding:20
   },

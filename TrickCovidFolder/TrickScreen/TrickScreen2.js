@@ -15,7 +15,7 @@ const TrickScreen2 = ({navigation}) => {
 
         <ScrollView>
 
-            <View style={{borderWidth: 10, borderColor: 'cornflowerblue'}}>
+            <View style={{borderWidth: 10, borderColor: '#3d6b85'}}>
                 <View style={styles.header}>
                     <Text style={styles.textHeader}>7 วิธีการเอาตัวรอด</Text>
                     <Text style={styles.textHeader}>เมื่อต้องออกนอกบ้าน</Text>
