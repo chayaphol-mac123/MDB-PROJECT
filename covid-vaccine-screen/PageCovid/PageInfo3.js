@@ -69,11 +69,11 @@ const PageInfo3 = ({navigation}) => {
       cardView: {
         backgroundColor: 'white',
         margin: width * 0.03,
-        borderRadius: width * 0.05,
         shadowColor: '#000',
         shadowOffset: { width:0.5, height: 0.5 },
         shadowOpacity: 0.5,
-        shadowRadius: 3
+        shadowRadius: 3,
+        elevation:9,
     },
     title: {
       marginHorizontal: width * 0.05,
@@ -93,17 +93,16 @@ const PageInfo3 = ({navigation}) => {
         fontWeight:'bold'
     },
       cardImage1:{
-        width:'100%',
+        width:'90%',
         height:300,
-        borderRadius:30,
-        paddingBottom:10
+        paddingBottom:10,
+      marginHorizontal:"5%"
     },
     cardImage2:{
-      width:'100%',
-      height:250,
-      alignItems:'center',
-      borderRadius:30,
-        paddingBottom:10
+      width:'90%',
+      height:300,
+      paddingBottom:10,
+    marginHorizontal:"5%"
   },
    
 text_normal:{

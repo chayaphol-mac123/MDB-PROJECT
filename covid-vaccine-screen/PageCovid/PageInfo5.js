@@ -96,11 +96,11 @@ const PageInfo5 = ({navigation}) => {
       cardView: {
           backgroundColor: 'white',
           margin: width * 0.03,
-          borderRadius: width * 0.05,
           shadowColor: '#000',
           shadowOffset: { width:0.5, height: 0.5 },
           shadowOpacity: 0.5,
-          shadowRadius: 3
+          shadowRadius: 3,
+          elevation:9
       },
       title: {
           marginHorizontal: width * 0.05,
@@ -117,9 +117,8 @@ const PageInfo5 = ({navigation}) => {
       },
       image: {
           height: height / 4,
-          marginLeft: width/60,
-          marginRight: width/66,
-          marginVertical: height * 0.02
+          width:"90%",
+          marginHorizontal:"5%"
       },
       
       title1: {

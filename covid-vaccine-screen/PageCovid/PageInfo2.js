@@ -69,7 +69,7 @@ const PageInfo2 = ({navigation}) => {
       width:"90%",
       height: height / 4,
       marginHorizontal:"5%",
-        borderRadius:15,
+      marginBottom:15,
     },
     
 })

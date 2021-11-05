@@ -22,6 +22,7 @@ const PageInfo6 = ({navigation}) => {
                   <Text style={styles.descriptions}>     - T : Thai Cha Na สแกนไทยชนะก่อนเข้า-ออกสถานที่สาธารณะทุกครั้ง เพื่อให้มีข้อมูลในการประสานงานได้ง่ายขึ้น</Text>
               </View>
               <View style={styles.cardView}>
+              <Text style={styles.title1}>หากอยู่ในพื้นที่แออัดควรทำอย่างไร</Text>
                 <Image style={styles.image} source={{uri:'http://healthydee.moph.go.th/backend/fileAttach/30082019_080616-0000001839.jpg'}}/>
                 <Text style={styles.descriptions}>{Info_1.text}</Text>
                 <Text style={styles.descriptions}>{Info_2.text}</Text>
@@ -40,11 +41,11 @@ const PageInfo6 = ({navigation}) => {
       cardView: {
           backgroundColor: 'white',
           margin: width * 0.03,
-          borderRadius: width * 0.05,
           shadowColor: '#000',
           shadowOffset: { width:0.5, height: 0.5 },
           shadowOpacity: 0.5,
-          shadowRadius: 3
+          shadowRadius: 3,
+          elevation:9
       },
       title: {
           marginHorizontal: width * 0.05,
@@ -61,10 +62,9 @@ const PageInfo6 = ({navigation}) => {
       },
       image: {
           height: height / 4,
-          marginLeft: width/60,
-          marginRight: width/66,
-          marginVertical: height * 0.02,
-          borderRadius:15
+          width:"90%",
+          marginHorizontal:"5%",
+          marginTop:10
       },
       author: {
           marginBottom: width * 0.0,
