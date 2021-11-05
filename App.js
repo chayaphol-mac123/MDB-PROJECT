@@ -69,8 +69,9 @@ const App = () => {
           component={ListTrickScreen}
           options={{
             title: 'Trick Covid For Everyone',
+            headerTintColor: '#fff',
             headerStyle: {
-              backgroundColor: 'lightpink',
+              backgroundColor: 'deepskyblue',
               shadowColor: 'black',
               elevation: 0,
             },

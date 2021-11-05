@@ -4,11 +4,11 @@ import {StyleSheet,Text,Image,TouchableOpacity, View, Dimensions} from 'react-na
 const Card = (props) => {
   return(
     <View style={styles.bder}>
-         <TouchableOpacity style={styles.card}>
-        <Image source={props.uri} style={styles.cardImage} />
-        <View style={{alignItems:'center',marginTop:10}}>
-        <Text style={styles.cardText}>{props.title}</Text>
-        </View>
+        <TouchableOpacity style={styles.card}>
+          <Image source={props.uri} style={styles.cardImage} />
+          <View style={{alignItems:'center',marginTop:10}}>
+            <Text style={styles.cardText}>{props.title}</Text>
+          </View>
       </TouchableOpacity>
     </View>
    
