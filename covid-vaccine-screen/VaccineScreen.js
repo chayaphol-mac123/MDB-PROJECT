@@ -5,7 +5,7 @@ import { styles } from './vaccineFolder/BestStyle';
 const ShowVaccine = ({navigation}) => {
     return (
         <View>
-            <ScrollView>
+            <ScrollView style={[styles.bgpage]}>
             <View style={[styles.header]}>
                 <View style={{ flex: 0.6 }}>
                     <Text style={styles.headerText}>Vaccine COVID-19</Text>

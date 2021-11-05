@@ -86,4 +86,7 @@ export const styles = StyleSheet.create({
     textTop: {
         marginTop: 20,
     },
+    bgpage: {
+        backgroundColor:'#f9fafd',
+    },
 });

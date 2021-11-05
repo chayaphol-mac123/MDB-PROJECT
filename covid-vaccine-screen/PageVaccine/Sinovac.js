@@ -12,11 +12,11 @@ const Sinovac = ({}) => {
     const info_sinovac5 = "อาการไม่พึงประสงค์หลังฉีดวัคซีน จริงๆ แล้วพบได้ในการฉีดวัคซีนทุกชนิด แต่สำหรับวัคซีนโควิดน่าจะเป็นที่สนใจมากกว่าวัคซีนชนิดอื่นๆ เพราะเป็นวัคซีนใหม่กำลังเป็นที่จับตามมองนั่นเอง ในประเทศไทย ปัจจุบัน (15 มีนาคม 2564) มีรายงานจำนวนผู้มีอาการไม่พึงประสงค์ (adverse reaction) จากการฉีดวัคซีนโควิดซิโนแวค ซึ่งไม่ใช่การแพ้วัคซีน (allergic reaction) ดังนี้ อาเจียน 17% ปวดเมื่อยเนื้อตัว 14% อักเสบบริเวณที่ฉีด 13% มีไข้ 11% นอกจากนั้นยังมีอาการปวดศีรษะ ท้องเสีย ผื่นขึ้น อ่อนเพลีย คลื่นไส้ มีอาการปวด บวมแดง บริเวณที่ฉีดวัคซีน ซึ่งกรมควบคุมโรคยืนยันว่า  เป็นอาการที่พบได้เป็นปกติหลังรับวัคซีน อาการดังกล่าวจะไม่รุนแรงและหายได้เองภายใน 1-2 วันหลังรับวัคซีน";
 
     return (
-        <ScrollView>
+        <ScrollView style={styles.bgpage}>
             <View style={styles.cardView}>
                 <Text style={styles.title}>วัคซีนโควิด Sinovac คืออะไร?</Text>
                 <Image style={styles.images} source={require("../ImageVaccine/sinovac2.jpg")}/>
-                <Text style={styles.descriptions}>{info_sinovac1}</Text>
+                <Text style={styles.description}>{info_sinovac1}</Text>
             </View>
             <View style={styles.cardView}>
                 <Text style={styles.title}>วัคซีนโควิด Sinovac มีประสิทธิภาพแค่ไหน?</Text>
@@ -51,11 +51,11 @@ const styles = StyleSheet.create({
     cardView: {
         backgroundColor: 'white',
         margin: width * 0.03,
-        borderRadius: width * 0.05,
         shadowColor: '#000',
         shadowOffset: { width:0.5, height: 0.5 },
         shadowOpacity: 0.5,
-        shadowRadius: 3
+        shadowRadius: 3,
+        elevation: 9,
     },
     title: {
         marginHorizontal: width * 0.05,
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     },
     description: {
         marginVertical: width * 0.05,
-        marginHorizontal: "1%",
+        marginHorizontal: "5%",
         color: 'gray',
         fontSize: 18
     },
@@ -91,8 +91,12 @@ const styles = StyleSheet.create({
     },
     images: {
         margin:0.03,
-        width: "100%",
+        width: "90%",
         height: height *0.30,
+        marginHorizontal: "5%",
+    },
+    bgpage: {
+        backgroundColor:'lavender',
     },
 
 })
