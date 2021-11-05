@@ -39,27 +39,27 @@ const App = ({ navigation }) => {
       <View style={styles.pad}>   
 
         <TouchableOpacity onPress={() => navigation.navigate('PageInfo1')}>
-            <Card title="ไวรัสcovid-19 คืออะไร" uri={imageInfo_1}  />
+            <Card title="ไวรัส covid-19 คืออะไร" uri={imageInfo_1}  />
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => navigation.navigate('PageInfo2')}>
-            <Card title="ต้นกําเนิดของไวรัสCovid-19" uri={imageInfo_2}/>    
+            <Card title="ต้นกําเนิดของไวรัส Covid-19" uri={imageInfo_2}/>    
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => navigation.navigate('PageInfo3')}>
-            <Card title="อาการของผู้ติดเชื้อCovid-19" uri={imageInfo_3}/>   
+            <Card title="อาการของผู้ติดเชื้อ Covid-19" uri={imageInfo_3}/>   
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => navigation.navigate('PageInfo4')}>
-            <Card title="Covid-19แพร่เชื้อได้อย่างไร" uri={imageInfo_4}/>   
+            <Card title=" Covid-19 แพร่เชื้อได้อย่างไร" uri={imageInfo_4}/>   
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => navigation.navigate('PageInfo5')}>
-            <Card title="กลุ่มเสี่ยงไวรัสCovid-19" uri={imageInfo_5}/>    
+            <Card title="กลุ่มเสี่ยงไวรัส Covid-19" uri={imageInfo_5}/>    
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => navigation.navigate('PageInfo6')}>
-            <Card title="มาตราการป้องกันCovid-19" uri={imageInfo_6}/>  
+            <Card title="มาตราการป้องกัน Covid-19" uri={imageInfo_6}/>  
         </TouchableOpacity>
 
 

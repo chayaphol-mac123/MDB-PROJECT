@@ -20,7 +20,7 @@ const HomeScreen = ({ navigation }) => {
     })
 
     return (
-        <SafeAreaView style={styles.container}>
+        <SafeAreaView style={styles.container, styles.bg}>
             <View style={styles.header}>
                 <Text style={styles.headerText}>Home</Text>
             </View>
@@ -134,6 +134,10 @@ const HomeScreen = ({ navigation }) => {
 export default HomeScreen;
 
 const styles = StyleSheet.create({
+    bg: {
+        backgroundColor: '#f9fafd',
+        flex: 1,
+    },
     container: {
         flex: 1,
     },

@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Icon from 'react-native-vector-icons/Ionicons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import CovidScreen from '../covid-vaccine-screen/CovidScreen';
 import VaccineScreen from '../covid-vaccine-screen/VaccineScreen';
@@ -15,6 +16,8 @@ const Tab = createBottomTabNavigator();
 
 const MainScreen = ({navigation}) => {
 
+    const insets = useSafeAreaInsets();
+
     return (
         <Tab.Navigator
             initialRouteName="Main"
@@ -22,7 +25,8 @@ const MainScreen = ({navigation}) => {
                 activeTintColor: '#fff',
                 activeBackgroundColor: 'blue',
                 inactiveBackgroundColor: 'blue',
-                labelStyle: {fontSize: 14},
+                labelStyle: {fontSize: 14, paddingBottom: 7 },
+                style: { height: 67 + insets.bottom,  },
             }}
             
         >

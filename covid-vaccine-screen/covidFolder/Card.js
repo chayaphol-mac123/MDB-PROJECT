@@ -34,23 +34,9 @@ const styles = StyleSheet.create({
     marginVertical:20,
   },
 
-  card:{
-    backgroundColor: '#87cefa',
-    marginBottom:10,
-    marginLeft:'2%',
-    width:'96%',
-    shadowColor:'#000',
-    shadowOpacity:0.2,
-    shadowRadius:1,
-    shadowOffset:{
-      width:3,
-      height:3
-    },
-    
-  },
  cardImage:{
    height:150,
-   width: deviceWidth - 25,
+   width: deviceWidth - 40,
    borderTopLeftRadius:radius,
    borderTopRightRadius:radius,
    opacity:0.9,
