@@ -28,7 +28,7 @@ const PageInfo4 = ({navigation}) => {
   }
 
       return(
-        <ScrollView>
+        <ScrollView style={styles.container}>
           <View >
             <View style={styles.cardView}>     
                 <Image style={styles.image} source={{uri:'http://www.dmscsmartlifeblog.com/userfiles/images/sneeze.jpg'}}/>
@@ -64,7 +64,9 @@ const PageInfo4 = ({navigation}) => {
 
       const { width, height } = Dimensions.get("screen");
       const styles = StyleSheet.create({
-       
+       container:{
+        backgroundColor:"wheat",
+       },
       cardView: {
           backgroundColor: 'white',
           margin: width * 0.03,
@@ -99,7 +101,8 @@ const PageInfo4 = ({navigation}) => {
           height: height / 4,
           marginLeft: width/60,
           marginRight: width/66,
-          marginVertical: height * 0.02
+          marginVertical: height * 0.02,
+          borderRadius:15
       },
     
   
