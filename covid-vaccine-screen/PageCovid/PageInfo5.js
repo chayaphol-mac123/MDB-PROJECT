@@ -46,19 +46,19 @@ const PageInfo5 = ({navigation}) => {
     text: "- สวมหน้ากากอนามัย เว้นระยะห่าง หมั่นล้างมือ"
   }
       return(
-          <ScrollView>
+          <ScrollView style={styles.container}>
               <View > 
                 <View style={styles.cardView}>
                   <Text style={styles.title}>กลุ่มเสี่ยงไวรัสCovid-19</Text>           
-                  <Image style={styles.image} source={{uri:"https://www.innnews.co.th/wp-content/uploads/2021/06/%E0%B8%A7%E0%B8%87%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%87%E0%B9%82%E0%B8%84%E0%B8%A7%E0%B8%B4%E0%B8%94-%E0%B9%80%E0%B8%8A%E0%B9%87%E0%B8%84%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B9%80%E0%B8%AD%E0%B8%87%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%87%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B9%82%E0%B8%84%E0%B8%A7%E0%B8%B4%E0%B8%94%E0%B9%84%E0%B8%AB%E0%B8%A1.png"}}/>
+                  <Image style={styles.image} source={{uri:"https://i.ytimg.com/vi/nu3gmOQ1atI/maxresdefault.jpg"}}/>
                   <Text style={styles.title1}>กรมควบคุมโรคได้แบ่งออกมาเป็น 3 กลุ่ม</Text>
                   <Text style={styles.descriptions}>      หากใครต้องการประเมินว่าเราอยู่ในกลุ่มเสี่ยงระดับใด โดยจะมีทั้งหมด 3 กลุ่ม ( 3 วง 3 ระดับ) </Text>
-                  <Text style={styles.descriptions}>       1.ผู้สัมผัสเสี่ยงสูง</Text>
-                  <Text style={styles.descriptions}>       2.ผู้สัมผัสกับผู้เสี่ยงสูง</Text>
-                  <Text style={styles.descriptions}>       3.ผู้ใกล้ชิดกับผู้สัมผัสเสี่ยงต่ำ</Text>
+                  <Text style={styles.descriptions}>       1.ผู้ที่มีความเสี่ยงสูง</Text>
+                  <Text style={styles.descriptions}>       2.ผู้ที่มีความเสี่ยงต่ำ</Text>
+                  <Text style={styles.descriptions}>       3.ผู้ที่ไม่มีความเสี่ยง</Text>
                 </View>
                 <View style={styles.cardView}>
-                  <Text style={styles.title1}>- วงที่ 1 ผู้สัมผัสเสี่ยงสูง</Text>
+                  <Text style={styles.title1}>- วงที่ 1 ผู้ที่มีความเสี่ยงสูง</Text>
                   <Text style={styles.descriptions}>     {Info_1.text}</Text>
                   <Text style={styles.title1}>สิ่งที่ต้องทำ</Text>
                   <Text style={styles.descriptions}>     {Info_11.text}</Text>
@@ -67,7 +67,7 @@ const PageInfo5 = ({navigation}) => {
                   <Text style={styles.descriptions}>     {Info_14.text}</Text>
                 </View>
                 <View style={styles.cardView}>
-                  <Text style={styles.title1}>- วงที่ 2 ผู้สัมผัสกับผู้สัมผัสเสี่ยงสูง </Text>
+                  <Text style={styles.title1}>- วงที่ 2 ผู้ที่มีความเสี่ยงต่ำ </Text>
                   <Text style={styles.descriptions}>     {Info_2.text}</Text>
                   <Text style={styles.title1}>สิ่งที่ต้องทำ</Text>
                   <Text style={styles.descriptions}>     {Info_21.text}</Text>
@@ -76,7 +76,7 @@ const PageInfo5 = ({navigation}) => {
                   <Text style={styles.descriptions}>     {Info_24.text}</Text>
                 </View>
                 <View style={styles.cardView}>
-                  <Text style={styles.title1}>- วงที่ 3 ผู้ใกล้ชิดกับผู้สัมผัสเสี่ยงต่ำ</Text>
+                  <Text style={styles.title1}>- วงที่ 3 ผู้ที่ไม่มีความเสี่ยง</Text>
                   <Text style={styles.descriptions}>     {Info_3.text}</Text>
                   <Text style={styles.title1}>สิ่งที่ต้องทำ</Text>
                   <Text style={styles.descriptions}>     {Info_31.text}</Text>
@@ -90,7 +90,9 @@ const PageInfo5 = ({navigation}) => {
       }  
       const { width, height } = Dimensions.get("screen");
       const styles = StyleSheet.create({
-       
+       container:{
+        backgroundColor:"thistle",
+       },
       cardView: {
           backgroundColor: 'white',
           margin: width * 0.03,

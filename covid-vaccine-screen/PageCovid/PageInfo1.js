@@ -3,16 +3,16 @@ import {Dimensions,Text,StyleSheet, View,Image } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 const PageInfo1 = ({ navigation }) => {
   const Info_1 = {
-    text: "       ไวรัสโควิด ถูกพบครั้งแรกในปี 1960 แต่ยังไม่ทราบแหล่งที่มาอย่างชัดเจนว่ามาจากที่ใด แต่เป็นไวรัสที่สามารถติดเชื้อได้ทั้งในมนุษย์และสัตว์ ปัจจุบันมีไวรัสสายพันธุ์นี้แล้วทั้งหมด 6 สายพันธุ์ "
+    text: "       ไวรัสโควิด ถูกพบในปี 1960 แต่ไม่ทราบแหล่งที่มาอย่างชัดเจน แต่เป็นไวรัสที่สามารถติดเชื้อได้ทั้งในมนุษย์และสัตว์ ปัจจุบันมีไวรัสสายพันธุ์นี้แล้วทั้งหมด 6 สายพันธุ์ "
   }
   const Info_2 = {
-    text: "       สายพันธุ์ที่กำลังแพร่ระบาดหนักทั่วโลกตอนนี้เป็นสายพันธุ์ที่ยังไม่เคยพบมาก่อน คือ สายพันธุ์ที่ 7 จึงถูกเรียกว่าเป็น “ไวรัสโคโรนาสายพันธุ์ใหม่” และในภายหลังถูกตั้งชื่อว่า  “โควิด-19” "
+    text: "       สายพันธุ์ที่กำลังแพร่ระบาดหนักทั่วโลกตอนนี้เป็นสายพันธุ์ที่ยังไม่เคยพบมาก่อน ถูกเรียกว่า “ไวรัสโคโรนาสายพันธุ์ใหม่” และในภายหลังถูกตั้งชื่อว่า  “โควิด-19” "
   }
   const Info_3 = {
-    text:"        การระบาดทั่วของโควิด-19 ในประเทศไทย ดำเนินอยู่ในประเทศไทยตั้งแต่วันที่ 13 มกราคม 2563 และเป็นส่วนหนึ่งของการระบาดทั่วโลกของโควิด-19 โดยประเทศไทยเป็นประเทศแรกที่พบผู้ป่วยยืนยันโควิด-19 รายแรกนอกประเทศจีน"
+    text:"        การระบาดของโควิด-19 ในประเทศ ไทยเกิดขึ้นเมื่อวันที่ 13 มกราคม 2563 และเป็นส่วนหนึ่งของการระบาดทั่วโลกของโควิด-19 โดยประเทศไทยเป็นประเทศแรกที่พบผู้ป่วยยืนยันโควิด-19 รายแรกนอกประเทศจีน"
   }
       return(
-          <ScrollView>
+          <ScrollView style={styles.container}>
           <View >
             {/* text and image on one line */}
             <View style={styles.cardView}>
@@ -34,15 +34,17 @@ const PageInfo1 = ({ navigation }) => {
 
     const { width, height } = Dimensions.get("screen");
     const styles = StyleSheet.create({
-     
+    container: {
+        backgroundColor:'lightskyblue',
+     },
     cardView: {
         backgroundColor: 'white',
         margin: width * 0.03,
-        borderRadius: width * 0.05,
         shadowColor: '#000',
         shadowOffset: { width:0.5, height: 0.5 },
         shadowOpacity: 0.5,
-        shadowRadius: 3
+        shadowRadius: 3,
+        elevation:9
     },
     title: {
         marginHorizontal: width * 0.05,
@@ -58,10 +60,11 @@ const PageInfo1 = ({ navigation }) => {
         fontSize: 18
     },
     image: {
+        width:"90%",
         height: height / 4,
-        marginLeft: width/60,
-        marginRight: width/66,
-        marginVertical: height * 0.02
+
+        marginHorizontal:"5%"
+        
     },
     
   

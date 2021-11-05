@@ -8,7 +8,7 @@ const PageInfo6 = ({navigation}) => {
     text:"      หากมีอาการผิดปกติโปรดไปพบแพทย์ โดยติดต่อล่วงหน้าเพื่อที่ผู้ให้บริการด้านสุขภาพแนะนำไปยังสถานพยาบาลที่ถูกต้อง"
   }
       return(
-          <ScrollView>
+          <ScrollView style={styles.container}>
               <View > 
                 <View style={styles.cardView}>
                   <Text style={styles.title1}>ยึดหลัก D-M-H-T-T ป้องกันโควิด-19</Text>
@@ -34,7 +34,9 @@ const PageInfo6 = ({navigation}) => {
 
       const { width, height } = Dimensions.get("screen");
       const styles = StyleSheet.create({
-       
+       container:{
+        backgroundColor:"palegreen",
+       },
       cardView: {
           backgroundColor: 'white',
           margin: width * 0.03,
@@ -61,7 +63,8 @@ const PageInfo6 = ({navigation}) => {
           height: height / 4,
           marginLeft: width/60,
           marginRight: width/66,
-          marginVertical: height * 0.02
+          marginVertical: height * 0.02,
+          borderRadius:15
       },
       author: {
           marginBottom: width * 0.0,
@@ -69,11 +72,6 @@ const PageInfo6 = ({navigation}) => {
           fontSize: 15,
           color: 'gray'
   
-      },
-      images: {
-          margin:0.03,
-          width: "100%",
-          height: height *0.30,
       },
       title1: {
         marginHorizontal: width * 0.05,
