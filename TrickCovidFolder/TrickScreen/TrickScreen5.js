@@ -42,8 +42,7 @@ const TrickScreen2 = ({ navigation }) => {
                     <Text style={styles.textBody2}>วิธีล้างมือด้วยเจลแอลกอฮอล์</Text>
                     <Image source={{uri:"https://s359.kapook.com/pagebuilder/21eb1d2d-b965-4328-aaf5-080b9ee388d1.jpg"}} style={styles.image} />
                     <View style={styles.bodyRow}>
-                    <Text style={styles.textDetails}>สามารถทำตามขั้นตอนตามรูปภาพได้เลย </Text>
-                    <Image source={{uri:"https://s359.kapook.com/pagebuilder/d1dca73f-e81c-4fb5-96ef-231faf84b71b.jpg"}} style={styles.image} />
+                
                     </View>
 
                     <View style={styles.bodyRow}>
