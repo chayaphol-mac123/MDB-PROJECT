@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import {View} from 'react-native';
+import { View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -16,6 +16,7 @@ import TrickScreen1 from './TrickCovidFolder/TrickScreen/TrickScreen1';
 import TrickScreen2 from './TrickCovidFolder/TrickScreen/TrickScreen2';
 import TrickScreen3 from './TrickCovidFolder/TrickScreen/TrickScreen3';
 import TrickScreen4 from './TrickCovidFolder/TrickScreen/TrickScreen4';
+import TrickScreen5 from './TrickCovidFolder/TrickScreen/TrickScreen5';
 
 import PageInfo1 from './covid-vaccine-screen/PageCovid/PageInfo1';
 import PageInfo2 from './covid-vaccine-screen/PageCovid/PageInfo2';
@@ -43,27 +44,27 @@ const App = () => {
 
         {/* Mac Screen */}
 
-        <AppStack.Screen 
-          name="Login" 
-          component={LoginScreen} 
-          options={{header: ()=> null}}
+        <AppStack.Screen
+          name="Login"
+          component={LoginScreen}
+          options={{ header: () => null }}
         />
-        <AppStack.Screen 
-          name="Signup" 
-          component={SignupScreen} 
+        <AppStack.Screen
+          name="Signup"
+          component={SignupScreen}
           options={{
             title: 'Sign Up',
             headerStyle: {
               backgroundColor: '#f9fafd',
               shadowColor: '#f9fafd',
               elevation: 0,
-          },
-        }}
+            },
+          }}
         />
-        <AppStack.Screen 
-          name="Main" 
-          component={MainScreen} 
-          options={{header: ()=> null}}
+        <AppStack.Screen
+          name="Main"
+          component={MainScreen}
+          options={{ header: () => null }}
         />
 
         <AppStack.Screen
@@ -118,9 +119,17 @@ const App = () => {
           }}
         />
 
-      <AppStack.Screen
+        <AppStack.Screen
           name="TrickScreen4"
           component={TrickScreen4}
+          options={{
+            title: '',
+          }}
+        />
+
+        <AppStack.Screen
+          name="TrickScreen5"
+          component={TrickScreen5}
           options={{
             title: '',
           }}
@@ -135,7 +144,7 @@ const App = () => {
               backgroundColor: 'dodgerblue',
               shadowColor: 'black',
               elevation: 0,
-              
+
             },
             headerTitleAlign: 'center',
             headerTitleStyle: {
@@ -156,27 +165,27 @@ const App = () => {
         <AppStack.Screen
           name="PageInfo2"
           component={PageInfo2}
-        />  
+        />
 
         <AppStack.Screen
           name="PageInfo3"
           component={PageInfo3}
-        /> 
+        />
 
         <AppStack.Screen
           name="PageInfo4"
           component={PageInfo4}
-        /> 
-        
+        />
+
         <AppStack.Screen
           name="PageInfo5"
           component={PageInfo5}
-        /> 
+        />
 
         <AppStack.Screen
           name="PageInfo6"
           component={PageInfo6}
-        />  
+        />
 
 
 

@@ -28,6 +28,10 @@ const ListTrickScreen = ({navigation}) => {
         uri: "https://s359.kapook.com/pagebuilder/3e261d0a-9220-45a2-938b-24c93b990502.jpg"
     }
 
+    const imagea_Info_6 = {
+        uri: "https://tcaster.net/wp-content/uploads/2020/04/%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%95%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B9%84%E0%B8%87%E0%B8%97%E0%B9%88%E0%B8%B2%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B8%A7%E0%B8%B4%E0%B8%81%E0%B8%A4%E0%B8%95-covid-19-01.png"
+    }
+
     return(
         <ScrollView style={styles2.body}>
             <View>
@@ -51,8 +55,8 @@ const ListTrickScreen = ({navigation}) => {
                     <Card title="อาการคนติดโควิดเป็นอย่างไร" uri={image_Info_5}>List Screen Covid</Card>
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => navigation.navigate('PhoneNumberCovid')}>
-                    <Card title="รวมสายด่วนโควิด" uri={imageInfo_1}>List Screen Covid</Card>
+                <TouchableOpacity onPress={() => navigation.navigate('TrickScreen5')}>
+                    <Card title="ป้องกันโควิด 19 เมื่อกลับถึงบ้าน" uri={imagea_Info_6}>List Screen Covid</Card>
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => navigation.navigate('PhoneNumberCovid')}>

@@ -20,7 +20,7 @@ const radius = 20;
 const styles = StyleSheet.create({
   bder:{
     width: deviceWidth - 40,
-    backgroundColor : '#87cefa',
+    backgroundColor : '#fff',
     height:200,
     borderRadius: radius,
     shadowColor:'#000',
