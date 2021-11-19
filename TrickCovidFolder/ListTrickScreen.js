@@ -31,7 +31,13 @@ const ListTrickScreen = ({navigation}) => {
     const imagea_Info_6 = {
         uri: "https://tcaster.net/wp-content/uploads/2020/04/%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%95%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B9%84%E0%B8%87%E0%B8%97%E0%B9%88%E0%B8%B2%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B8%A7%E0%B8%B4%E0%B8%81%E0%B8%A4%E0%B8%95-covid-19-01.png"
     }
+    const image_Info_7 = {
+        uri: "https://homeguru.homepro.co.th/wp-content/uploads/2021/01/prevention-of-covid-19-with-a-must-have-portable-item-cover.jpg"
+    }
 
+    const image_Info_8 = {
+        uri: "https://www.cigna.co.th/sites/default/files/pictures/activity-at-home-Cover.jpg"
+    }
     return(
         <ScrollView style={styles2.body}>
             <View>
@@ -59,12 +65,12 @@ const ListTrickScreen = ({navigation}) => {
                     <Card title="ป้องกันโควิด 19 เมื่อกลับถึงบ้าน" uri={imagea_Info_6}>List Screen Covid</Card>
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => navigation.navigate('PhoneNumberCovid')}>
-                    <Card title="รวมสายด่วนโควิด" uri={imageInfo_1}>List Screen Covid</Card>
+                <TouchableOpacity onPress={() => navigation.navigate('TrickScreen6')}>
+                    <Card title="5 สิ่งของที่ควรพกติดตัวในยุคโควิด" uri={image_Info_7}>List Screen Covid</Card>
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => navigation.navigate('PhoneNumberCovid')}>
-                    <Card title="รวมสายด่วนโควิด" uri={imageInfo_1}>List Screen Covid</Card>
+                <TouchableOpacity onPress={() => navigation.navigate('TrickScreen7')}>
+                    <Card title="5 กิจกรรมยามว่าง ในช่วงโควิด" uri={image_Info_8}>List Screen Covid</Card>
                 </TouchableOpacity>
 
             </View>
