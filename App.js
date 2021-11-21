@@ -35,6 +35,11 @@ import Sinovac from './covid-vaccine-screen/PageVaccine/Sinovac';
 import VdoScreen from './TrickCovidFolder/VdoScreen/VdoScreen1';
 
 import PhoneNumberCovid from './TrickCovidFolder/TrickScreen/PhoneNumberCovid';
+import ChooseVdoScreen from './TrickCovidFolder/VdoScreen/ChooseVdoScreen';
+
+import VdoHead1 from './TrickCovidFolder/VdoScreen/VdoHead1';
+import VdoHead2 from './TrickCovidFolder/VdoScreen/VdoHead2';
+import VdoHead3 from './TrickCovidFolder/VdoScreen/VdoHead3';
 
 
 const AppStack = createStackNavigator();
@@ -154,8 +159,90 @@ const App = () => {
         />
 
         <AppStack.Screen
+          name="ChooseVdoScreen"
+          component={ChooseVdoScreen}
+          options={{
+            title: 'VDO Trick Covid',
+            headerStyle: {
+              backgroundColor: 'dodgerblue',
+              shadowColor: 'black',
+              elevation: 0,
+
+            },
+            headerTitleAlign: 'center',
+            headerTitleStyle: {
+              fontSize: 25,
+              color: 'white',
+              fontWeight: 'bold',
+            }
+          }}
+        />
+
+
+
+        <AppStack.Screen
           name="VdoScreen"
           component={VdoScreen}
+          options={{
+            title: 'VDO Trick Covid',
+            headerStyle: {
+              backgroundColor: 'dodgerblue',
+              shadowColor: 'black',
+              elevation: 0,
+
+            },
+            headerTitleAlign: 'center',
+            headerTitleStyle: {
+              fontSize: 25,
+              color: 'white',
+              fontWeight: 'bold',
+            }
+          }}
+        />
+
+        <AppStack.Screen
+          name="VdoHead1"
+          component={VdoHead1}
+          options={{
+            title: 'VDO Trick Covid',
+            headerStyle: {
+              backgroundColor: 'dodgerblue',
+              shadowColor: 'black',
+              elevation: 0,
+
+            },
+            headerTitleAlign: 'center',
+            headerTitleStyle: {
+              fontSize: 25,
+              color: 'white',
+              fontWeight: 'bold',
+            }
+          }}
+        />
+
+        <AppStack.Screen
+          name="VdoHead2"
+          component={VdoHead2}
+          options={{
+            title: 'VDO Trick Covid',
+            headerStyle: {
+              backgroundColor: 'dodgerblue',
+              shadowColor: 'black',
+              elevation: 0,
+
+            },
+            headerTitleAlign: 'center',
+            headerTitleStyle: {
+              fontSize: 25,
+              color: 'white',
+              fontWeight: 'bold',
+            }
+          }}
+        />
+
+        <AppStack.Screen
+          name="VdoHead3"
+          component={VdoHead3}
           options={{
             title: 'VDO Trick Covid',
             headerStyle: {
@@ -178,33 +265,122 @@ const App = () => {
         <AppStack.Screen
           name="PageInfo1"
           component={PageInfo1}
+          options={{
+            title: 'ไวรัส covid-19 คืออะไร',
+            headerTintColor: '#fff',
+            headerStyle: {
+              backgroundColor: 'deepskyblue',
+              shadowColor: 'black',
+              elevation: 0,
+            },
+            headerTitleAlign: 'left',
+            headerTitleStyle: {
+              fontSize: 21,
+              color: 'white',
+              fontWeight: 'bold',
+            }
+          }}
         />
 
         <AppStack.Screen
           name="PageInfo2"
           component={PageInfo2}
-        />
+          options={{
+            title: 'ต้นกําเนิดของไวรัส Covid-19',
+            headerTintColor: '#fff',
+            headerStyle: {
+              backgroundColor: 'lightcoral',
+              shadowColor: 'black',
+              elevation: 0,
+            },
+            headerTitleAlign: 'left',
+            headerTitleStyle: {
+              fontSize: 21,
+              color: 'white',
+              fontWeight: 'bold',
+            }
+          }}
+        />  
 
         <AppStack.Screen
           name="PageInfo3"
           component={PageInfo3}
-        />
+          options={{
+            title: 'อาการของผู้ติดเชื้อ Covid-19',
+            headerTintColor: '#fff',
+            headerStyle: {
+              backgroundColor: 'indianred',
+              shadowColor: 'black',
+              elevation: 0,
+            },
+            headerTitleAlign: 'left',
+            headerTitleStyle: {
+              fontSize: 21,
+              color: 'white',
+              fontWeight: 'bold',
+            }
+          }}
+        /> 
 
         <AppStack.Screen
           name="PageInfo4"
           component={PageInfo4}
-        />
-
+          options={{
+            title: 'Covid-19 แพร่เชื้อได้อย่างไร',
+            headerTintColor: '#fff',
+            headerStyle: {
+              backgroundColor: 'wheat',
+              shadowColor: 'black',
+              elevation: 0,
+            },
+            headerTitleAlign: 'left',
+            headerTitleStyle: {
+              fontSize: 21,
+              color: 'white',
+              fontWeight: 'bold',
+            }
+          }}
+        /> 
+        
         <AppStack.Screen
           name="PageInfo5"
           component={PageInfo5}
-        />
+          options={{
+            title: 'กลุ่มเสี่ยงไวรัส Covid-19',
+            headerTintColor: '#fff',
+            headerStyle: {
+              backgroundColor: 'mediumpurple',
+              shadowColor: 'black',
+              elevation: 0,
+            },
+            headerTitleAlign: 'left',
+            headerTitleStyle: {
+              fontSize: 21,
+              color: 'white',
+              fontWeight: 'bold',
+            }
+          }}
+        /> 
 
         <AppStack.Screen
           name="PageInfo6"
           component={PageInfo6}
-        />
-
+          options={{
+            title: 'มาตราการป้องกัน Covid-19',
+            headerTintColor: '#fff',
+            headerStyle: {
+              backgroundColor: 'mediumseagreen',
+              shadowColor: 'black',
+              elevation: 0,
+            },
+            headerTitleAlign: 'left',
+            headerTitleStyle: {
+              fontSize: 21,
+              color: 'white',
+              fontWeight: 'bold',
+            }
+          }}
+        />  
 
 
         {/* Best Screen */}

@@ -4,6 +4,7 @@ import Card from './covidFolder/CardForTrick'
 import Card2 from './covidFolder/CardForTrick2'
 import ListTrickScreen from '../TrickCovidFolder/ListTrickScreen';
 import VdoScreen from '../TrickCovidFolder/VdoScreen/VdoScreen1';
+import ChooseVdoScreen from '../TrickCovidFolder/VdoScreen/ChooseVdoScreen'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const imageInfo_1 = {
@@ -33,7 +34,7 @@ const TrickcovidScreen = ({navigation}) => {
                <Text style={{fontWeight: 'bold', fontSize: 20,}} >VDO ความรู้เล็กๆน้อยเกี่ยวกับ Covid-19</Text>
            </View>
 
-           <TouchableOpacity onPress={() => navigation.navigate('VdoScreen')}>
+           <TouchableOpacity onPress={() => navigation.navigate('ChooseVdoScreen')}>
                 <Card2  title="VideoTrickCovid" uri={imageInfo_2} />
            </TouchableOpacity>
            
